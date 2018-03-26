@@ -14,22 +14,22 @@
                realizado hasta el momento.</p>
           </div>
           <div class="project text-justify card-body">
-            <router-link to="#" class="nav-link">
+            <router-link to="/callregister" class="nav-link">
               <img src="/static/img/callregister01.png" class="imgcard">
             </router-link>
             <h3>CallRegister</h3>
             <p>Plantilla de registro de llamadas para mesa de ayuda.</p>
           </div>
           <div class="project text-justify card-body">
-            <router-link to="#" class="nav-link">
+            <router-link to="/places" class="nav-link">
               <img src="/static/img/paces01.png" class="imgcard">
             </router-link>
-            <h3>Lugares</h3>
+            <h3>Places</h3>
             <p>Aplicación Web para publicitar sitios de comidas rapidas,
               restaurantes, bares y todo tipo de lugares comerciales.</p>
           </div>
           <div class="project text-justify card-body">
-            <router-link to="#" class="nav-link">
+            <router-link to="/ticketit" class="nav-link">
               <img src="/static/img/ticket01.png" class="imgcard">
             </router-link>
             <h3>Tickets IT</h3>
@@ -83,7 +83,7 @@ hr{
   border-radius: 10px;
 }
 .imgcard{
-  width: 450px;
+  width: 98%;
   height: 300px;
 }
 </style>

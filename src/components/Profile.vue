@@ -127,7 +127,7 @@ export default {
 }
 .profile{
   position: absolute;
-  transform: translate(400px,200px);
+  transform: translate(20%,200px);
   z-index: 1;
   font-size: 80px;
   color: #000;
@@ -135,7 +135,7 @@ export default {
 .profdes{
   width: 400px;
   position: absolute;
-  transform: translate(400px,400px);
+  transform: translate(15%,400px);
   z-index: 1;
   background: #A5A5A5;
   padding: 10px;

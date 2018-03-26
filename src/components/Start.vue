@@ -8,6 +8,9 @@
         <h1>Jonathan Simanca Desarrollador Full Stack Javascript.</h1>
         <div class="header">
           <nav class="navbar navbar-expand-lg navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse">
               <ul class="navbar-nav mx-auto order-0">
                 <li class="nav-item">
@@ -19,7 +22,7 @@
                   </router-link>
                 </li>
                 <li class="nav-item">
-                  <router-link to="/profile" class="nav-link">
+                  <router-link to="/work" class="nav-link">
                     <img src="/static/img/work.png">
                     <br>
                     Mi trabajo
@@ -27,7 +30,7 @@
                   </router-link>
                 </li>
                 <li class="nav-item">
-                  <router-link to="/profile" class="nav-link">
+                  <router-link to="/contact" class="nav-link">
                     <img src="/static/img/contact.png">
                     <br>
                     Contacto
@@ -70,5 +73,6 @@ export default {
 .handmain{
   padding: 10px;
   overflow-x: auto;
+  overflow:hidden;
 }
 </style>

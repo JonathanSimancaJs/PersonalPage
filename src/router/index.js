@@ -5,6 +5,9 @@ import Profile from '@/components/Profile'
 import Work from '@/components/Work'
 import Post from '@/components/Post'
 import Contact from '@/components/Contact'
+import CallRegister from '@/components/projects/callregister'
+import Places from '@/components/projects/places'
+import TicketIt from '@/components/projects/ticketsit'
 
 Vue.use(Router)
 
@@ -34,6 +37,21 @@ export default new Router({
       path: '/contact',
       name: 'Contact',
       component: Contact
+    },
+    {
+      path: '/callregister',
+      name: 'CallRegister',
+      component: CallRegister
+    },
+    {
+      path: '/places',
+      name: 'Places',
+      component: Places
+    },
+    {
+      path: '/ticketit',
+      name: 'TicketIt',
+      component: TicketIt
     }
   ]
 })
