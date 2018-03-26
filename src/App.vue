@@ -3,7 +3,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <router-view/>
-    <Navbar/>
   </div>
 </template>
 
@@ -14,6 +13,10 @@ export default {
 </script>
 
 <style>
+*{
+  margin: 0px;
+  padding: 0px;
+}
 #app {
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -22,8 +25,10 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-
 body{
-  background-image: url(/static/img/pexels-photo-285437-2.jpeg);
+  background-image: url(/static/img/pexels-photo-373076.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
 }
 </style>

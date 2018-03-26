@@ -5,28 +5,31 @@
         <img src="/static/img/logotatan.png" id="logo">
       </div>
       <div class="col-sm-7 handmain">
-        <h1>Jonathan Simanca Mora Desarrollador Full Stack Javascript.</h1>
+        <h1>Jonathan Simanca Desarrollador Full Stack Javascript.</h1>
         <div class="header">
           <nav class="navbar navbar-expand-lg navbar-light">
             <div class="collapse navbar-collapse">
               <ul class="navbar-nav mx-auto order-0">
                 <li class="nav-item">
                   <router-link to="/profile" class="nav-link">
-                    <img src="/static/img/usuario.png">
+                    <img src="/static/img/profile.png">
+                    <br>
                     Perfil
                     <span class="sr-only">(current)</span>
                   </router-link>
                 </li>
                 <li class="nav-item">
                   <router-link to="/profile" class="nav-link">
-                    <img src="/static/img/engrane.png">
+                    <img src="/static/img/work.png">
+                    <br>
                     Mi trabajo
                     <span class="sr-only">(current)</span>
                   </router-link>
                 </li>
                 <li class="nav-item">
                   <router-link to="/profile" class="nav-link">
-                    <img src="/static/img/contacto.png">
+                    <img src="/static/img/contact.png">
+                    <br>
                     Contacto
                     <span class="sr-only">(current)</span>
                   </router-link>

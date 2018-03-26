@@ -19,6 +19,8 @@ export default {
 .foot{
   padding-top: 80px;
   font-family: sans-serif;
-  font-size: 10px;
+  font-size: 15px;
+  color: #fff;
+  background: #A5A5A5;
 }
 </style>
