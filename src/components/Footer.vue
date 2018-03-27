@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="foot fadeIn delay-2">
+  <div class="foot fadeIn">
     <footer class="container-fluid text-center bg-lightgray">
         <div class="copyrights" style="margin-top:25px;">
             <p>Bogotá-Colombia © 2018, All Rights Reserved

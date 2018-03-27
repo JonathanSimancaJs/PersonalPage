@@ -67,10 +67,6 @@ export default {
 </script>
 
 <style lang="css">
-.pcont{
-  background: #ffff;
-  margin-top: 20px;
-}
 .linkoption{
   padding: 10px;
 }
@@ -81,6 +77,7 @@ export default {
   width: 600px;
   height: 340px;
   margin: 0 auto;
+  margin-bottom: 40px;
   position: relative;
   -webkit-perspective: 1000;
 	-moz-perspective: 1000;

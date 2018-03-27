@@ -119,7 +119,7 @@ export default {
   height: 80px;
 }
 .avatar{
-  transform: translate(120px,80px);
+  transform: translate(90px,80px);
   width: 952px;
   height: 635px;
   z-index: 2;
@@ -127,7 +127,7 @@ export default {
 }
 .profile{
   top: 450px;
-  left: 15%;
+  left: 5%;
   position: absolute;
   z-index: 1;
   font-size: 80px;
@@ -135,7 +135,7 @@ export default {
 }
 .profdes{
   top: 650px;
-  left: 15%;
+  left: 5%;
   max-width: 400px;
   position: absolute;
   z-index: 1;

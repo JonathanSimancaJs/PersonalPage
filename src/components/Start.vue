@@ -7,6 +7,22 @@
       <div class="col-sm-7 handmain fadeIn">
         <h1>Jonathan Simanca Desarrollador Full Stack Javascript.</h1>
         <div class="header">
+
+          <div class="socials">
+            <div id="hexagon">
+              <router-link to="/profile"><i class="fa fa-user"></i></router-link>
+            </div>
+            <div id="hexagon">
+              <router-link to="/work"><i class="fa fa-briefcase"></i></router-link>
+            </div>
+            <div id="hexagon">
+              <router-link to="/contact"><i class="fa fa-envelope"></i></router-link>
+            </div>
+            </div>
+            <br>
+            <br>
+            <br>
+          <!--
           <nav class="navbar navbar-expand-lg navbar-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -39,7 +55,8 @@
                 </li>
               </ul>
             </div>
-          </nav>
+          </nav> -->
+
         </div>
         <Footer/>
       </div>
@@ -64,10 +81,9 @@ export default {
   display: flex;
 }
 .header{
-  padding-top: 60px;
+  padding-top: 30px;
 }
 .handcont{
-  background-color: #fff;
   border-radius: 5px;
 }
 .handmain{
@@ -75,4 +91,5 @@ export default {
   overflow-x: auto;
   overflow:hidden;
 }
+
 </style>

@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <router-view/>
   </div>
 </template>
@@ -18,6 +15,8 @@ export default {
   margin: 0px;
   padding: 0px;
 }
+
+/*App general Style*/
 #app {
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -27,11 +26,16 @@ export default {
   margin-top: 60px;
 }
 body{
-  background-image: url(/static/img/pexels-photo-373076.jpeg);
+  background-color: #f6f6f6;
+  /*
+  background-image: url(/static/img/ricepaper.png);
   background-repeat: no-repeat;
   background-size: 100%;
-  background-attachment: fixed;
+  background-attachment: fixed;*/
 }
+
+/*Animation of elements*/
+
 .fadeIn {
     animation-name: fadeIn;
     -webkit-animation-name: fadeIn;
@@ -58,5 +62,102 @@ body{
   100% {
       opacity: 1;
   }
+}
+
+/*Style of nav bar*/
+
+.reviews{
+  margin-top: 28px;
+}
+.reviews div{
+  display: inline-block;
+  positon: absolute;
+  left: 155px;
+  //left: 156px;
+}
+.socials div{
+  display: inline-block;
+}
+.fa.fa-facebook, .fa.fa-linkedin, .fa.fa-user, .fa.fa-briefcase, .fa.fa-rss-square, .fa.fa-envelope, .fa.fa-linkedin-square,.fa.fa-github,.fa.fa-facebook-square, .fa.fa-instagram{
+  color: white;
+  font-size: 50px;
+  line-height: 60px;
+  text-shadow: 2px 2px 10px black;
+}
+
+#itunes{
+  width: 49px;
+  height: 49px;
+  border: 3px solid white;
+  border-radius: 50%;
+  positon: absolute;
+}
+
+.fa.fa-music{
+  font-size: 32px;
+  position: relative;
+  bottom: 8px;
+  right: 1px;
+  padding: 3px;
+}
+
+#hexagon {
+	width: 100px;
+	height: 60px;
+	background: #000;
+	position: relative;
+   top: 30px;
+   text-align: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.75);
+}
+#hexagon:before {
+	content: "";
+	position: absolute;
+	top: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 25px solid #000;
+    -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#hexagon:after {
+	content: "";
+	position: absolute;
+	bottom: -24px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 25px solid #000;
+    -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#hexagon:hover{
+  background: #F7DF1D;
+}
+
+#hexagon:hover:after{
+  border-top: 25px solid #F7DF1D;
+}
+#hexagon:hover:before{
+  border-bottom: 25px solid #F7DF1D;
 }
 </style>
