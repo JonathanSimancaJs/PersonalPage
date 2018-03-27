@@ -32,4 +32,31 @@ body{
   background-size: 100%;
   background-attachment: fixed;
 }
+.fadeIn {
+    animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
+    animation-duration: 0.5s;
+    -webkit-animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+    visibility: visible !important;
+    opacity: 0;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+.delay-1 {
+    animation-delay: 0.3s;
+}
+.delay-2 {
+    animation-delay: 0.6s;
+}
+@keyframes fadeIn{
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
 </style>

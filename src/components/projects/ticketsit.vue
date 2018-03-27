@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="">
     <Navbar/>
-      <div class="container text-justify pbox">
+      <div class="container text-justify pbox fadeIn">
         <div class="">
           <h1>CallRegister</h1>
         </div>
@@ -18,7 +18,7 @@
                     guardar en un histórico el cual podíamos consultar fácilmente para ver
                     qué cantidad de casos habíamos creado.</p>
           </div>
-          <div class="col-sm-4 text-left detaillist">
+          <div class="col-sm-4 text-left detaillist fadeIn delay-1">
             <ul>
               <li><b>Técnologias:</b> MySql, PHP, Html.</li>
               <li><b>Año:</b> 2017</li>
@@ -27,7 +27,7 @@
             </ul>
           </div>
         </div>
-        <div class="galery">
+        <div class="galery fadeIn delay-2">
           <img src="/static/img/ticket01.png">
           <img src="/static/img/ticket02.png">
           <img src="/static/img/ticket03.png">

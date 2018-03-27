@@ -1,10 +1,10 @@
 <template lang="html">
   <div class="container handcont">
     <div class="row">
-      <div class="col-sm-5 handmain">
+      <div class="col-sm-5 handmain fadeIn delay-1">
         <img src="/static/img/logotatan.png" id="logo">
       </div>
-      <div class="col-sm-7 handmain">
+      <div class="col-sm-7 handmain fadeIn">
         <h1>Jonathan Simanca Desarrollador Full Stack Javascript.</h1>
         <div class="header">
           <nav class="navbar navbar-expand-lg navbar-light">

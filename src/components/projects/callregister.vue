@@ -6,7 +6,7 @@
           <h1>CallRegister</h1>
         </div>
         <div class="row">
-          <div class="col-sm-6 paragraph">
+          <div class="col-sm-6 paragraph fadeIn">
             <p>Es la aplicación web más reciente que he desarrollado. En mi último empleo
                había estado trabajando con una mesa de ayuda, brindando soporte técnico y
                registrando solicitudes de servicio. El sistema que usábamos para la gestión
@@ -18,7 +18,7 @@
                     guardar en un histórico el cual podíamos consultar fácilmente para ver
                     qué cantidad de casos habíamos creado.</p>
           </div>
-          <div class="col-sm-4 text-left detaillist">
+          <div class="col-sm-4 text-left detaillist fadeIn delay-1">
             <ul>
               <li><b>Técnologias:</b> MongoDb, NodeJs, VueJs, Bootstrap.</li>
               <li><b>Año:</b> 2018</li>
@@ -27,7 +27,7 @@
             </ul>
           </div>
         </div>
-        <div class="galery">
+        <div class="galery fadeIn delay-2">
           <img src="/static/img/callregister01.png">
           <img src="/static/img/callregister03.png">
           <img src="/static/img/callregister04.png">

@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="">
     <Navbar/>
-    <div class="container pcont">
+    <div class="container pcont fadeIn">
       <div class="mycard">
         <div class="containercard">
           <div class="cardbod">
@@ -165,7 +165,7 @@ export default {
   clear: both;
 }
 .front h1 {
-  color: #FC5135;
+  color: #5A5A5A;
   text-transform: uppercase;
   font-weight: 400;
   line-height: 1;
@@ -174,7 +174,7 @@ export default {
   font-size: 40px;
 }
 .back h1 {
-  color: #FC5135;
+  color: #5A5A5A;
   text-transform: uppercase;
   font-weight: 400;
   line-height: 1;

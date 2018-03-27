@@ -1,20 +1,20 @@
 <template lang="html">
   <div class="vacio">
     <Navbar/>
-      <h1 class="profile">
+      <h1 class="profile fadeIn delay-1">
         ¿QUIEN
         <br>
         SOY?
       </h1>
-        <p class="profdes text-justify">San Carlos – Córdoba es mi tierra natal, más exactamente provengo de una vereda llamada “La coroza”.
+        <p class="profdes text-justify fadeIn delay-2">San Carlos – Córdoba es mi tierra natal, más exactamente provengo de una vereda llamada “La coroza”.
           Han sido tantas las experiencias que me han llevado por la vida y heme aquí en Bogotá. Aunque llevo mi tierra en el corazón,
           también me he encariñado con esta ciudad.
           <br>
           Hace seis años decidí casarme, gracias a ello vivo feliz con mi esposa y dos hermosos retoños,
           Santiago mi niño travieso y Sofia la princesa de papá. Mi familia es el motor de mi vida y ellos me dan la
           fuerza para superar cualquier obstáculo.</p>
-      <img src="/static/img/IMG_20180317_140700.jpg" class="avatar">
-      <div class="container text-justify cont2 handcont">
+      <img src="/static/img/IMG_20180317_140700.jpg" class="avatar fadeIn">
+      <div class="container text-justify cont2 handcont fadeIn">
         <div class="row">
             <div class="col-sm-6 card">
               <h4>Preparación</h4>
@@ -126,16 +126,18 @@ export default {
   border-radius: 5px;
 }
 .profile{
+  top: 450px;
+  left: 15%;
   position: absolute;
-  transform: translate(20%,200px);
   z-index: 1;
   font-size: 80px;
   color: #000;
 }
 .profdes{
-  width: 400px;
+  top: 650px;
+  left: 15%;
+  max-width: 400px;
   position: absolute;
-  transform: translate(15%,400px);
   z-index: 1;
   background: #A5A5A5;
   padding: 10px;

@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="">
     <Navbar/>
-      <div class="cardui">
+      <div class="cardui fadeIn">
         <div class="thumbnail">
           <img class="left" src="/static/img/code-2558220_1920.jpg">
         </div>
@@ -9,10 +9,10 @@
           <h1>Javascript esta de moda!</h1>
           <div class="author">
             <img src="https://randomuser.me/api/portraits/men/95.jpg"/>
-            <h2>Jonathin</h2>
+            <h2><b>Jonathin</b></h2>
           </div>
           <div class="separator"></div>
-          <p>Magnesium is one of the six essential macro-minerals that is required by the body for energy production and synthesis of protein and enzymes. It contributes to the development of bones and most importantly it is responsible for synthesis of your DNA and RNA. A new report that has appeared in theBritish Journal of Cancer, gives you another reason to add more magnesium to your diet...</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <div class="bot">
           <h5>12</h5>
@@ -20,7 +20,6 @@
           <ul>
             <li><i class="fa fa-eye fa-2x"></i></li>
             <li><i class="fa fa-heart-o fa-2x"></i></li>
-            <li><i class="fa fa-envelope-o fa-2x"></i></li>
             <li><i class="fa fa-share-alt fa-2x"></i></li>
           </ul>
           <div class="fab">
@@ -125,7 +124,7 @@ img.left{
 	margin-right : 6px;
 	text-align : right;
 	font-size : 0.8rem;
-	color :white;
+	color :#000;
 }
 .right p{
   text-align: justify;
@@ -136,6 +135,7 @@ img.left{
 }
 .bot h5{
   position: absolute;
+  top: 300px;
   left: 30px;
   bottom: -120px;
   font-size: 6rem;
@@ -143,13 +143,16 @@ img.left{
 }
 .bot h6{
   position: absolute;
+  top: 390px;
   left: 30px;
   bottom: -55px;
   font-size: 2rem;
   color: #C3C3C3;
 }
 .bot ul{
-  margin-left: 250px;
+  position: absolute;
+  top: 350px;
+  left: 300px;
 }
 .bot li{
   display: inline;
