@@ -71,7 +71,8 @@ export default {
   padding: 10px;
 }
 .mycard{
-  box-sizing:border-box
+  box-sizing:border-box;
+  margin-bottom: 200px;
 }
 .containercard {
   width: 600px;

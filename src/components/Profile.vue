@@ -150,5 +150,8 @@ margin-top: 85px;
   font-size: 12px;
   padding-top: 20px;
 }
+.card{
+  padding-bottom: 50px;
+}
 
 </style>

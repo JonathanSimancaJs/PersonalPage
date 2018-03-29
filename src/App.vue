@@ -18,7 +18,7 @@ export default {
 
 /*App general Style*/
 #app {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Oswald', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -72,11 +72,14 @@ body{
 .reviews div{
   display: inline-block;
   positon: absolute;
-  left: 155px;
-  //left: 156px;
+  left: 0px;
 }
 .socials div{
   display: inline-block;
+}
+.button div{
+  display: inline-block;
+  margin-top: 30px;
 }
 .fa.fa-facebook, .fa.fa-linkedin, .fa.fa-user, .fa.fa-briefcase, .fa.fa-rss-square, .fa.fa-envelope, .fa.fa-linkedin-square,.fa.fa-github,.fa.fa-facebook-square, .fa.fa-instagram{
   color: white;
@@ -85,28 +88,12 @@ body{
   text-shadow: 2px 2px 10px black;
 }
 
-#itunes{
-  width: 49px;
-  height: 49px;
-  border: 3px solid white;
-  border-radius: 50%;
-  positon: absolute;
-}
-
-.fa.fa-music{
-  font-size: 32px;
-  position: relative;
-  bottom: 8px;
-  right: 1px;
-  padding: 3px;
-}
-
 #hexagon {
 	width: 100px;
 	height: 60px;
-	background: #000;
+	background: #333333;
 	position: relative;
-   top: 30px;
+   top: 40px;
    text-align: center;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -126,7 +113,7 @@ body{
 	height: 0;
 	border-left: 50px solid transparent;
 	border-right: 50px solid transparent;
-	border-bottom: 25px solid #000;
+	border-bottom: 25px solid #333333;
     -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -142,7 +129,7 @@ body{
 	height: 0;
 	border-left: 50px solid transparent;
 	border-right: 50px solid transparent;
-	border-top: 25px solid #000;
+	border-top: 25px solid #333333;
     -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -151,13 +138,13 @@ body{
 }
 
 #hexagon:hover{
-  background: #F7DF1D;
+  background: #8cc84b;
 }
 
 #hexagon:hover:after{
-  border-top: 25px solid #F7DF1D;
+  border-top: 25px solid #8cc84b;
 }
 #hexagon:hover:before{
-  border-bottom: 25px solid #F7DF1D;
+  border-bottom: 25px solid #8cc84b;
 }
 </style>

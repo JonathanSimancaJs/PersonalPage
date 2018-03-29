@@ -1,13 +1,11 @@
 <template lang="html">
   <div class="container handcont">
     <div class="row">
-      <div class="col-sm-5 handmain fadeIn delay-1">
-        <img src="/static/img/logotatan.png" id="logo">
-      </div>
       <div class="col-sm-7 handmain fadeIn">
-        <h1>Jonathan Simanca Desarrollador Full Stack Javascript.</h1>
+        <h1>Jonathan Simanca Mora
+          <br>
+          Desarrollador Full Stack Javascript.</h1>
         <div class="header">
-
           <div class="socials">
             <div id="hexagon">
               <router-link to="/profile"><i class="fa fa-user"></i></router-link>
@@ -19,75 +17,49 @@
               <router-link to="/contact"><i class="fa fa-envelope"></i></router-link>
             </div>
             </div>
-            <br>
-            <br>
-            <br>
-          <!--
-          <nav class="navbar navbar-expand-lg navbar-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse">
-              <ul class="navbar-nav mx-auto order-0">
-                <li class="nav-item">
-                  <router-link to="/profile" class="nav-link">
-                    <img src="/static/img/profile.png">
-                    <br>
-                    Perfil
-                    <span class="sr-only">(current)</span>
-                  </router-link>
-                </li>
-                <li class="nav-item">
-                  <router-link to="/work" class="nav-link">
-                    <img src="/static/img/work.png">
-                    <br>
-                    Mi trabajo
-                    <span class="sr-only">(current)</span>
-                  </router-link>
-                </li>
-                <li class="nav-item">
-                  <router-link to="/contact" class="nav-link">
-                    <img src="/static/img/contact.png">
-                    <br>
-                    Contacto
-                    <span class="sr-only">(current)</span>
-                  </router-link>
-                </li>
-              </ul>
-            </div>
-          </nav> -->
-
         </div>
-        <Footer/>
+      </div>
+      <div class="col-sm-5 handmain fadeIn">
+        <img src="/static/img/logotatan.png" id="logo">
       </div>
       <div class="conthex">
-        <div class="hex1"></div>
-        <div class="hex2"></div>
-        <div class="hex3"></div>
-        <div class="hex4"></div>
-        <div class="Text text-justify">
-          <h3>Habilidades</h3>
-          <div class="descbox">
-            <h1>MongoDB</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                 ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  Duis aute irure dolor in reprehenderit in voluptate velit
-                   esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                    sint occaecat cupidatat non proident, sunt in culpa
-                     qui officia deserunt mollit anim id est laborum.</p>
+        <div class="hex1" v-on:mouseover="mouseOver">M</div>
+        <div class="hex2" v-on:mouseover="mouseOver">N</div>
+        <div class="hex3" v-on:mouseover="mouseOver">E</div>
+        <div class="hex4" v-on:mouseover="mouseOver">V</div>
+        <div id="marc" class="Text text-justify">
+          <h3>Conocimientos</h3>
+          <div id="mongo" class="hidecont">
+            <p class="codti01">MongoDB</p>
+            <p><span class="sp01">Descripción: </span>Me gusta trabajar principalmente
+               con Mongo, me parece una base de datos no relacional muy eficiente,
+                 pero también puedo adaptar proyectos con MySQL o Firebase, según
+                  la necesidad.</p>
+            <p><span class="sp01">Habilidades: </span>SQL, JSON + Diseño de DB</p>
           </div>
-          <div class="descbox">
-            <h1>MongoDB</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                 ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  Duis aute irure dolor in reprehenderit in voluptate velit
-                   esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                    sint occaecat cupidatat non proident, sunt in culpa
-                     qui officia deserunt mollit anim id est laborum.</p>
+          <div id="nodejs" class="hidecont">
+            <p class="codti02">Node.js</p>
+            <p><span class="sp02">Descripción: </span>Me gusta trabajar principalmente
+               con Mongo, me parece una base de datos no relacional muy eficiente,
+                 pero también puedo adaptar proyectos con MySQL o Firebase, según
+                  la necesidad.</p>
+            <p><span class="sp02">Habilidades: </span>Javascript, npm</p>
+          </div>
+          <div id="express" class="hidecont">
+            <p class="codti03">Express</p>
+            <p><span class="sp03">Descripción: </span>Me gusta trabajar principalmente
+               con Mongo, me parece una base de datos no relacional muy eficiente,
+                 pero también puedo adaptar proyectos con MySQL o Firebase, según
+                  la necesidad.</p>
+            <p><span class="sp03">Habilidades: </span>Javascript, npm</p>
+          </div>
+          <div id="vuejs" class="hidecont">
+            <p class="codti04">Vue.js</p>
+            <p><span class="sp04">Descripción: </span>Me gusta trabajar principalmente
+               con Mongo, me parece una base de datos no relacional muy eficiente,
+                 pero también puedo adaptar proyectos con MySQL o Firebase, según
+                  la necesidad.</p>
+            <p><span class="sp04">Habilidades: </span>Javascript, npm</p>
           </div>
         </div>
       </div>
@@ -100,6 +72,39 @@ import Footer from '../components/Footer.vue';
 export default {
   components: {
     Footer
+  },
+  methods:{
+  mouseOver: function(id){
+
+    var elementA, elementB, elementC, elementD;
+
+    elementA = document.getElementById('mongo');
+    elementB = document.getElementById('nodejs');
+    elementC = document.getElementById('express');
+    elementD = document.getElementById('vuejs');
+
+    if(id.target.className == "hex1"){
+      elementA.className = "contbox fadeIn delay-1";
+      elementB.className = "hidecont";
+      elementC.className = "hidecont";
+      elementD.className = "hidecont";
+    }else if(id.target.className == "hex2"){
+      elementA.className = "hidecont";
+      elementB.className = "contbox fadeIn delay-1";
+      elementC.className = "hidecont";
+      elementD.className = "hidecont";
+    }else if(id.target.className == "hex3"){
+      elementA.className = "hidecont";
+      elementB.className = "hidecont";
+      elementC.className = "contbox fadeIn delay-1";
+      elementD.className = "hidecont";
+    }else if (id.target.className == "hex4") {
+      elementA.className = "hidecont";
+      elementB.className = "hidecont";
+      elementC.className = "hidecont";
+      elementD.className = "contbox fadeIn delay-1";
+    }
+    }
   }
 }
 </script>
@@ -118,21 +123,22 @@ export default {
   border-radius: 5px;
 }
 .handmain{
-  padding: 10px;
+  padding-right: 5%;
   overflow-x: auto;
   overflow:hidden;
 }
 
 
 .conthex{
-  margin-top: 80px;
-  margin-left: 20%;
-  width: 800px;
+  margin-top: 60px;
+  margin-left: 15%;
+  width: 900px;
   height: 450px;
-  border: 1px solid;
 }
 .hex1{
-  background: red;
+  background: #333333;
+  font-size: 3.0rem;
+  color: #fff;
   height: 100px;
   width: 173.2px;
   position: relative;
@@ -149,19 +155,21 @@ export default {
 }
 .hex1::after{
   bottom: -100px;
-  border-top: 50px solid red;
+  border-top: 50px solid #333333;
   border-bottom: 50px solid transparent;
 }
 .hex1::before{
   top: -100px;
   border-top: 50px solid transparent;
-  border-bottom: 50px solid red;
+  border-bottom: 50px solid #333333;
 }
 /*hooooo*/
 .hex2{
   margin-top: 60px;
   margin-left: 95px;
-  background: red;
+  background: #8cc84b;
+  font-size: 3.0rem;
+  color: #fff;
   height: 100px;
   width: 173.2px;
   position: relative;
@@ -178,20 +186,22 @@ export default {
 }
 .hex2::after{
   bottom: -100px;
-  border-top: 50px solid red;
+  border-top: 50px solid #8cc84b;
   border-bottom: 50px solid transparent;
 }
 .hex2::before{
   top: -100px;
   border-top: 50px solid transparent;
-  border-bottom: 50px solid red;
+  border-bottom: 50px solid #8cc84b;
 }
 
 /*hooooo*/
 .hex3{
   margin-top: -100px;
   margin-left: -95px;
-  background: red;
+  background: #b3b3b3;
+  font-size: 3.0rem;
+  color: #fff;
   height: 100px;
   width: 173.2px;
   position: relative;
@@ -208,20 +218,22 @@ export default {
 }
 .hex3::after{
   bottom: -100px;
-  border-top: 50px solid red;
+  border-top: 50px solid #b3b3b3;
   border-bottom: 50px solid transparent;
 }
 .hex3::before{
   top: -100px;
   border-top: 50px solid transparent;
-  border-bottom: 50px solid red;
+  border-bottom: 50px solid #b3b3b3;
 }
 
 /*hooooo*/
 .hex4{
   margin-top: 60px;
   margin-left: 0px;
-  background: red;
+  background: #16A085;
+  font-size: 3.0rem;
+  color: #fff;
   height: 100px;
   width: 173.2px;
   position: relative;
@@ -238,19 +250,24 @@ export default {
 }
 .hex4::after{
   bottom: -100px;
-  border-top: 50px solid red;
+  border-top: 50px solid #16A085;
   border-bottom: 50px solid transparent;
 }
 .hex4::before{
   top: -100px;
   border-top: 50px solid transparent;
-  border-bottom: 50px solid red;
+  border-bottom: 50px solid #16A085;
 }
 
 .Text{
   margin-top: -350px;
-  padding-left: 300px;
+  padding-left: 400px;
   padding-right: 20px;
+}
+
+.Text h3{
+  font-size: 3.0rem;
+  color: #333;
 }
 
 .hex1:hover {
@@ -269,10 +286,43 @@ export default {
   transform: scale(1.1);
   transition-duration: 0.5s;
 }
-.descbox{
+.hidecont{
   display:none;
 }
-.descboxtrue{
+.contbox{
+  border-left: 2px solid #dedede;
+  padding-left: 5px;
+}
+.codti01{
+  font-size: 6rem;
+  color: #333333;
 
+}
+.sp01{
+  color: #333333;
+}
+.codti02{
+  font-size: 6rem;
+  color: #8cc84b;
+
+}
+.sp02{
+  color: #8cc84b;
+}
+.codti03{
+  font-size: 6rem;
+  color: #b3b3b3;
+
+}
+.sp03{
+  color: #b3b3b3;
+}
+.codti04{
+  font-size: 6rem;
+  color: #16A085;
+
+}
+.sp04{
+  color: #16A085;
 }
 </style>

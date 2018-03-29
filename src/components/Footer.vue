@@ -17,10 +17,10 @@ export default {
 
 <style lang="css">
 .foot{
-  padding-top: 80px;
-  font-family: sans-serif;
+  margin-top: 50px;
+  padding-top: 20px;
   font-size: 15px;
-  color: #fff;
-  background: #A5A5A5;
+  color: #333333;
+  background: #f6f6f6;
 }
 </style>
