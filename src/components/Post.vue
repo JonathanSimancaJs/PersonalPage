@@ -1,36 +1,53 @@
 <template lang="html">
-  <div class="">
+  <div>
     <Navbar/>
-      <div class="cardui fadeIn">
-        <div class="thumbnail">
-          <img class="left" src="/static/img/code-2558220_1920.jpg">
-        </div>
-        <div class="right">
-          <h1>Javascript esta de moda!</h1>
-          <div class="author">
-            <img src="https://randomuser.me/api/portraits/men/95.jpg"/>
-            <h2><b>Jonathin</b></h2>
+      <div class="container">
+        <div class="row">
+          <div id="blogcont" class="blogcont col-sm-8">
+            <div id="imgblog" class="imgblog">
+              <img src="/static/img/code-2558220_1920.jpg">
+            </div>
+            <div id="blogright" class="blogright">
+              <h1>Este es un titulo largo por que nescesito probar a ver que tal.</h1>
+              <div class="author">
+                <img src="https://randomuser.me/api/portraits/men/95.jpg"/>
+                <h2><b>Jonathin</b></h2>
+              </div>
+              <div class="separator"></div>
+              <div class="blogparagraph">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing
+                      elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                       ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                         anim id est laborum.</p>
+              </div>
+              <div class="fabiconarrow">
+                <a href="#"><i id="fa" class="fa fa-arrow-circle-down" v-on:click="showPost()"></i></a>
+              </div>
+            </div>
+            <div id="bot" class="bot">
+              <h5>29</h5>
+              <h6>MARZO-2018</h6>
+              <ul>
+                <li><i class="fa fa-eye fa-2x"></i></li>
+                <li><i class="fa fa-thumbs-o-up fa-2x"></i></li>
+              </ul>
+            </div>
           </div>
-          <div class="separator"></div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-               proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                 ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                   anim id est laborum.</p>
-        </div>
-        <div class="bot">
-          <h5>12</h5>
-          <h6>JANUARY</h6>
-          <ul>
-            <li><i class="fa fa-eye fa-2x"></i></li>
-            <li><i class="fa fa-heart-o fa-2x"></i></li>
-            <li><i class="fa fa-share-alt fa-2x"></i></li>
-          </ul>
-          <div class="fab">
-            <i class="fa fa-arrow-down fa-3x"></i>
+          <div class="blogcat col-sm-2">
+            <h1>Categorias:</h1>
+            <ul>
+              <li>Todos</li>
+              <li>Actualidad</li>
+              <li>Hardware</li>
+              <li>Peliculas</li>
+              <li>Programación</li>
+              <li>Series</li>
+              <li>Videojuegos</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -45,125 +62,165 @@ export default {
   components: {
     Navbar,
     Footer
+  },
+  methods:{
+    showPost:function(){
+      var element = document.getElementById('blogcont');
+      console.log(blogcont);
+    }
   }
 }
 </script>
 
 <style lang="css">
-.cardui{
-  position : relative;
-	height: 450px;
-	width: 900px;
-	margin : 100px auto;
-	background-color : #FFF;
-	-webkit-box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
-	box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
+.blogcat{
+  text-align: justify;
+  margin-top: 100px;
+  margin-left: 800px;
+  position: fixed;
+  padding-left: 20px;
+  -webkit-box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
 }
-.thumbnail{
-  float : left;
-	position : relative;
-	left : 30px;
-	top : -30px;
-	height : 320px;
-	width : 530px;
-	-webkit-box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.75);
-	box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.75);
-	overflow: hidden;
+.blogcat ul{
+  list-style: none;
 }
-img.left{
+.blogcont{
+  text-align: justify;
+  margin-top: 100px;
+  height: 400px;
+  -webkit-box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
+}
+.imgblog img{
+  width: 50%;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  height: auto;
-  width: 100%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+  top: -30px;
+  -webkit-box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.75);
 }
-.right{
-  margin-left : 590px;
-	margin-right : 20px;
+.blogright{
+  width: 45%;
+  margin-left: 400px;
 }
-.right h1{
-  padding-top: 15px;
-  font-size: 1.3rem;
-  color: #4B4B4B;
+.blogright h1 {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 1.5rem;
 }
 .author{
-  background-color : #9ECAFF;
+  background-color : #333;
 	height : 30px;
 	width : 110px;
 	border-radius : 20px;
 }
-.author>img{
+.author h2 {
+  padding-top : 8px;
+	margin-right : 10px;
+	text-align : right;
+	font-size : 0.8rem;
+	color :#fff;
+}
+.author img {
   padding-top: 5px;
   margin-left: 10px;
   float: left;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  border-radius: 30%;
 }
 .separator{
-  margin-top : 10px;
-	border : 1px solid #C3C3C3;
+  margin-top: 10px;
+  border: 1px solid #3333;
 }
-.author h2{
-  padding-top : 8px;
-	margin-right : 6px;
-	text-align : right;
-	font-size : 0.8rem;
-	color :#000;
-}
-.right p{
-  text-align: justify;
+.blogparagraph{
   padding-top: 10px;
-  font-size: 0.95rem;
-  line-height: 150%;
-  color: #4B4B4B;
+  height: 250px;
+  overflow: hidden;
 }
-.bot h5{
+.bot{
   position: absolute;
-  top: 300px;
-  left: 30px;
-  bottom: -120px;
-  font-size: 6rem;
-  color: #C3C3C3;
-}
-.bot h6{
-  position: absolute;
-  top: 390px;
-  left: 30px;
-  bottom: -55px;
-  font-size: 2rem;
-  color: #C3C3C3;
+  top: 240px;
 }
 .bot ul{
-  position: absolute;
-  top: 350px;
-  left: 300px;
+  position: relative;
+  top: -50px;
+  left: 190%;
 }
 .bot li{
   display: inline;
   list-style: none;
-  padding-right: 40px;
-  color: #7B7B7B;
 }
-.fab {
-  position: absolute;
-  right: 50px;
-  bottom: -40px;
-  box-sizing: border-box;
-  padding-top: 18px;
-  background-color: #1875D0;
-  width: 80px;
-  height: 80px;
-  color: white;
-  text-align: center;
+.bot h5{
+  font-size: 4rem;
+  color: #C3C3C3;
+}
+.bot h6{
+  font-size: 2rem;  text-align: center;
+  color: #C3C3C3;
+}
+.fabiconarrow{
+  padding-top: 10px;
+  padding-left: 60%;
+}
+.fa-arrow-circle-down, .fa-arrow-circle-up{
+  color: #16A085;
+  background-color: #fff;
   border-radius: 50%;
-  -webkit-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+  font-size: 80px;
+  line-height: 60px;
+  text-shadow: 2px 2px 10px black;
+}
+
+/*Expand blog content*/
+.imgblogexp img{
+  width: 95%;
+  height: 400px;
+  position: absolute;
+  top: -30px;
+  -webkit-box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.75);
+}
+.blogrightexp{
+  width: 97%;
+  margin-left: 10px;
+}
+.blogcontexp{
+  text-align: justify;
+  margin-top: 100px;
+  padding-top: 260px;
+  height:auto;
+  -webkit-box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
+}
+
+.botexp{
+  position: absolute;
+  top: 0px;
+  left: 60%;
+}
+.botexp ul{
+  top: -50px;
+  left: 190%;
+}
+.botexp li{
+  display: inline;
+  list-style: none;
+}
+.botexp h5{
+  font-size: 4rem;
+  color: #C3C3C3;
+}
+.botexp h6{
+  font-size: 2rem;  text-align: center;
+  color: #C3C3C3;
+}
+.fabiconarrowexp{
+  padding-left: 90%;
 }
 </style>

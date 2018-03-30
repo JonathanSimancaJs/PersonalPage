@@ -69,19 +69,12 @@ body{
 .reviews{
   margin-top: 28px;
 }
-.reviews div{
-  display: inline-block;
-  positon: absolute;
-  left: 0px;
-}
-.socials div{
+
+.navbuttons div{
   display: inline-block;
 }
-.button div{
-  display: inline-block;
-  margin-top: 30px;
-}
-.fa.fa-facebook, .fa.fa-linkedin, .fa.fa-user, .fa.fa-briefcase, .fa.fa-rss-square, .fa.fa-envelope, .fa.fa-linkedin-square,.fa.fa-github,.fa.fa-facebook-square, .fa.fa-instagram{
+
+.fa.fa-user, .fa.fa-briefcase, .fa.fa-rss-square, .fa.fa-envelope{
   color: white;
   font-size: 50px;
   line-height: 60px;

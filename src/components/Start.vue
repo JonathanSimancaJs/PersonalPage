@@ -6,7 +6,7 @@
           <br>
           Desarrollador Full Stack Javascript.</h1>
         <div class="header">
-          <div class="socials">
+          <div class="navbuttons">
             <div id="hexagon">
               <router-link to="/profile"><i class="fa fa-user"></i></router-link>
             </div>
@@ -23,11 +23,11 @@
         <img src="/static/img/logotatan.png" id="logo">
       </div>
       <div class="conthex">
-        <div class="hex1" v-on:mouseover="mouseOver">M</div>
-        <div class="hex2" v-on:mouseover="mouseOver">N</div>
-        <div class="hex3" v-on:mouseover="mouseOver">E</div>
-        <div class="hex4" v-on:mouseover="mouseOver">V</div>
-        <div id="marc" class="Text text-justify">
+        <div class="hex1 fadeIn coming01" v-on:mouseover="mouseOver">M</div>
+        <div class="hex2 fadeIn coming04" v-on:mouseover="mouseOver">N</div>
+        <div class="hex3 fadeIn coming02" v-on:mouseover="mouseOver">E</div>
+        <div class="hex4 fadeIn coming03" v-on:mouseover="mouseOver">V</div>
+        <div id="marc" class="Text text-justify fadeIn">
           <h3>Conocimientos</h3>
           <div id="mongo" class="hidecont">
             <p class="codti01">MongoDB</p>
@@ -83,22 +83,22 @@ export default {
     elementC = document.getElementById('express');
     elementD = document.getElementById('vuejs');
 
-    if(id.target.className == "hex1"){
+    if(id.target.className == "hex1 fadeIn coming01"){
       elementA.className = "contbox fadeIn delay-1";
       elementB.className = "hidecont";
       elementC.className = "hidecont";
       elementD.className = "hidecont";
-    }else if(id.target.className == "hex2"){
+    }else if(id.target.className == "hex2 fadeIn coming04"){
       elementA.className = "hidecont";
       elementB.className = "contbox fadeIn delay-1";
       elementC.className = "hidecont";
       elementD.className = "hidecont";
-    }else if(id.target.className == "hex3"){
+    }else if(id.target.className == "hex3 fadeIn coming02"){
       elementA.className = "hidecont";
       elementB.className = "hidecont";
       elementC.className = "contbox fadeIn delay-1";
       elementD.className = "hidecont";
-    }else if (id.target.className == "hex4") {
+    }else if (id.target.className == "hex4 fadeIn coming03") {
       elementA.className = "hidecont";
       elementB.className = "hidecont";
       elementC.className = "hidecont";
@@ -111,13 +111,13 @@ export default {
 
 <style lang="css">
 #logo{
-  width: 413px;
-  height: 413px;
+  width: 300px;
+  height: 300px;
   border-radius: 5px;
   display: flex;
 }
 .header{
-  padding-top: 30px;
+  padding-top: 0px;
 }
 .handcont{
   border-radius: 5px;
@@ -128,9 +128,20 @@ export default {
   overflow:hidden;
 }
 
-
+.coming01{
+  animation-delay: 0.2s;
+}
+.coming02{
+  animation-delay: 0.4s;
+}
+.coming03{
+  animation-delay: 0.6s;
+}
+.coming04{
+  animation-delay: 0.8s;
+}
 .conthex{
-  margin-top: 60px;
+  margin-top: 40px;
   margin-left: 15%;
   width: 900px;
   height: 450px;

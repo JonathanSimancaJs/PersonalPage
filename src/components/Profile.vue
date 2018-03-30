@@ -147,7 +147,7 @@ export default {
 margin-top: 85px;
 }
 .ctextlogo{
-  font-size: 12px;
+  font-size: 15px;
   padding-top: 20px;
 }
 .card{

@@ -9,27 +9,34 @@
             <hr>
             <p>Durante el proceso de aprendizaje como desarrollador Web,
               he trabajado en algunos proyectos personales que han sido
-              de gran ayuda para desarrollar habilidades de diseño y creación.
+              de gran ayuda para mejorar mis habilidades de diseño y creación.
                A continuación muestro los trabajos mas completos que he
                realizado hasta el momento.</p>
+            <p>Actualmente me encuentro trabajando en otros proyectos que
+               no aparecen aquí, a medida que lleve un progreso razonable
+                o los haya terminado los daré a conocer. Mi proceso de
+                aprendizaje como desarrollador de paginas y aplicaciones
+                 web nunca termina, es un mundo que se encuentra en constante
+                  cambio y mejoras en cuanto a lenguajes de programación
+                   y tecnologías de la Web.</p>
           </div>
-          <div class="project text-justify card-body fadeIn">
-            <router-link to="/callregister" class="nav-link">
+          <div class="project text-justify fadeIn">
+            <router-link to="/callregister">
               <img src="/static/img/callregister01.png" class="imgcard">
             </router-link>
             <h3>CallRegister</h3>
             <p>Plantilla de registro de llamadas para mesa de ayuda.</p>
           </div>
-          <div class="project text-justify card-body fadeIn">
-            <router-link to="/places" class="nav-link">
+          <div class="project text-justify fadeIn">
+            <router-link to="/places">
               <img src="/static/img/places01.png" class="imgcard">
             </router-link>
             <h3>Places</h3>
             <p>Aplicación Web para publicitar sitios de comidas rapidas,
               restaurantes, bares y todo tipo de lugares comerciales.</p>
           </div>
-          <div class="project text-justify card-body fadeIn">
-            <router-link to="/ticketit" class="nav-link">
+          <div class="project text-justify fadeIn">
+            <router-link to="/ticketit">
               <img src="/static/img/ticket01.png" class="imgcard">
             </router-link>
             <h3>Tickets IT</h3>
@@ -66,10 +73,19 @@ hr{
 }
 .project{
   background: #ffff;
-  border-radius: 10px;
+  box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.05);
+  border-radius: 2px 2px 2px 2px;
+  -webkit-border-radius: 2px 2px 2px 2px;
   width: 45%;
   height: 440px;
   margin: 25px;
+}
+.project h3{
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.project p{
+  padding-left: 10px;
 }
 .project:hover{
   box-shadow:1px 9px 34px 0px rgba(0,0,0,0.75);
@@ -82,7 +98,7 @@ hr{
   border-radius: 10px;
 }
 .imgcard{
-  width: 98%;
-  height: 300px;
+  width: 100%;
+  height: 75%;
 }
 </style>

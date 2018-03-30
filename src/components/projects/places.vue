@@ -20,7 +20,7 @@
           </div>
           <div class="col-sm-4 text-left detaillist fadeIn delay-1">
             <ul>
-              <li><b>Técnologias:</b> MongoDb, NodeJs, ReactJs.</li>
+              <li><b>Arquitectura:</b> MongoDb, NodeJs, ReactJs.</li>
               <li><b>Año:</b> 2017</li>
               <li><b>Repositorio GitHub:</b>
                 <a href="https://github.com/JonathanSimancaJs/RestApiPlacesFront" target="_blank">
@@ -69,6 +69,6 @@ export default {
 .galery img{
   padding-top: 20px;
   width: 90%;
-  box-shadow: -1px 18px 40px -16px rgba(0,0,0,0.75);
+  box-shadow: 0 16px 22px rgba(0,0,0,.12);
 }
 </style>

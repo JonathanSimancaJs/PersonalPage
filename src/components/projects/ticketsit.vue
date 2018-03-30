@@ -3,7 +3,7 @@
     <Navbar/>
       <div class="container text-justify pbox fadeIn">
         <div class="">
-          <h1>CallRegister</h1>
+          <h1>Tickets IT</h1>
         </div>
         <div class="row">
           <div class="col-sm-6 paragraph">
@@ -20,7 +20,7 @@
           </div>
           <div class="col-sm-4 text-left detaillist fadeIn delay-1">
             <ul>
-              <li><b>Técnologias:</b> MySql, PHP, Html.</li>
+              <li><b>Técnologias:</b> MySql, PHP, Html, Css.</li>
               <li><b>Año:</b> 2017</li>
               <li><b>Repositorio GitHub:</b><a href="https://github.com/JonathanSimancaJs/CoursePHP/tree/master/Medivhtest" target="_blank">
                 https://github.com/JonathanSimancaJs/CoursePHP/tree/master/Medivhtest</a></li>
@@ -34,6 +34,12 @@
           <img src="/static/img/ticket04.png">
           <img src="/static/img/ticket05.png">
           <img src="/static/img/ticket06.png">
+          <img src="/static/img/ticket07.png">
+          <img src="/static/img/ticket08.png">
+          <img src="/static/img/ticket10.png">
+          <img src="/static/img/ticket11.png">
+          <img src="/static/img/ticket13.png">
+          <img src="/static/img/ticket14.png">
         </div>
       </div>
     <Footer/>
@@ -70,6 +76,6 @@ export default {
 .galery img{
   padding-top: 20px;
   width: 90%;
-  box-shadow: -1px 18px 40px -16px rgba(0,0,0,0.75);
+  box-shadow: 0 16px 22px rgba(0,0,0,.12);
 }
 </style>

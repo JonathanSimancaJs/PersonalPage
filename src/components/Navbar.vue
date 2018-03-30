@@ -9,7 +9,7 @@
       <div class="col-sm-1 divhide">
       </div>
       <div class="navbarmain">
-        <div class="socials">
+        <div class="navbuttons">
           <div id="hexagon">
             <router-link to="/profile"><i class="fa fa-user"></i></router-link>
           </div>
@@ -23,23 +23,7 @@
             <router-link to="/contact"><i class="fa fa-envelope"></i></router-link>
           </div>
           </div>
-          <!--
-          <div class="reviews">
-          <div id="hexagon">
-            <i class="fa fa-linkedin-square"></i>
-          </div>
-          <div id="hexagon">
-            <i class="fa fa-instagram"></i>
-          </div>
-          <div id="hexagon">
-            <i class="fa fa-facebook-square"></i>
-          </div>
-          <div id="hexagon">
-            <i class="fa fa-github"></i>
-          </div>
-        -->
         </div>
-
       </div>
         </div>
       </div>
@@ -54,9 +38,9 @@ export default {
 
 <style lang="css">
 #logonav{
-  width: 230px;
-  height: 230px;
-  border-radius: 10px;
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
   -webkit-box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.75);
   box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.75);

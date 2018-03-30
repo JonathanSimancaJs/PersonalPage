@@ -72,6 +72,7 @@ export default {
 }
 .mycard{
   box-sizing:border-box;
+  margin-top: 100px;
   margin-bottom: 200px;
 }
 .containercard {
