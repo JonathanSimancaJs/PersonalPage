@@ -8,7 +8,75 @@
               <img src="/static/img/code-2558220_1920.jpg">
             </div>
             <div id="blogright" class="blogright">
+              <h1>Otro blog de prueba.</h1>
+              <div class="author">
+                <img src="https://randomuser.me/api/portraits/men/95.jpg"/>
+                <h2><b>Jonathin</b></h2>
+              </div>
+              <div class="separator"></div>
+              <div class="blogparagraph">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing
+                      elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                       ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                         anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+              <div class="fabiconarrow">
+                <a href="#"><i id="fa" class="fa fa-arrow-circle-down" v-on:click="showPost()"></i></a>
+              </div>
+            </div>
+            <div id="bot" class="bot">
+              <h5>29</h5>
+              <h6>MARZO-2018</h6>
+              <ul>
+                <li><i class="fa fa-eye fa-2x"></i></li>
+                <li><i class="fa fa-thumbs-o-up fa-2x"></i></li>
+              </ul>
+            </div>
+          </div>
+          <div id="blogcont" class="blogcont col-sm-8">
+            <div id="imgblog" class="imgblog">
+              <img src="/static/img/code-2558220_1920.jpg">
+            </div>
+            <div id="blogright" class="blogright">
               <h1>Este es un titulo largo por que nescesito probar a ver que tal.</h1>
+              <div class="author">
+                <img src="https://randomuser.me/api/portraits/men/95.jpg"/>
+                <h2><b>Jonathin</b></h2>
+              </div>
+              <div class="separator"></div>
+              <div class="blogparagraph">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing
+                      elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                       ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                         anim id est laborum.</p>
+              </div>
+              <div class="fabiconarrow">
+                <a href="#"><i id="fa" class="fa fa-arrow-circle-down" v-on:click="showPost()"></i></a>
+              </div>
+            </div>
+            <div id="bot" class="bot">
+              <h5>29</h5>
+              <h6>MARZO-2018</h6>
+              <ul>
+                <li><i class="fa fa-eye fa-2x"></i></li>
+                <li><i class="fa fa-thumbs-o-up fa-2x"></i></li>
+              </ul>
+            </div>
+          </div>
+          <div id="blogcont" class="blogcont col-sm-8">
+            <div id="imgblog" class="imgblog">
+              <img src="/static/img/code-2558220_1920.jpg">
+            </div>
+            <div id="blogright" class="blogright">
+              <h1>Hello</h1>
               <div class="author">
                 <img src="https://randomuser.me/api/portraits/men/95.jpg"/>
                 <h2><b>Jonathin</b></h2>
@@ -66,7 +134,17 @@ export default {
   methods:{
     showPost:function(){
       var element = document.getElementById('blogcont');
-      console.log(blogcont);
+      element.className="blogcontexp col-sm-8";
+      var element = document.getElementById('imgblog');
+      element.className="imgblogexp";
+      var element = document.getElementById('blogright');
+      element.className="blogrightexp";
+      document.getElementById("bot").style.top = 0;
+      document.getElementById("bot").style.left = "70%";
+      var element = document.getElementById('bot');
+      element.className="bot botexp";
+      var element = document.getElementById('fa');
+      element.className="fa fa-arrow-circle-up";
     }
   }
 }
@@ -159,11 +237,11 @@ export default {
   color: #C3C3C3;
 }
 .bot h6{
-  font-size: 2rem;  text-align: center;
+  font-size: 2rem;
   color: #C3C3C3;
 }
 .fabiconarrow{
-  padding-top: 10px;
+  padding-top: 20px;
   padding-left: 60%;
 }
 .fa-arrow-circle-down, .fa-arrow-circle-up{
@@ -177,13 +255,18 @@ export default {
 
 /*Expand blog content*/
 .imgblogexp img{
-  width: 95%;
-  height: 400px;
+  width: 60%;
+  height: 280px;
   position: absolute;
-  top: -30px;
+  top: -40px;
   -webkit-box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.75);
   box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.75);
+}
+.blogparagraphex{
+  padding-top: 10px;
+  height: 250px;
+  overflow: hidden;
 }
 .blogrightexp{
   width: 97%;
@@ -198,27 +281,9 @@ export default {
   -moz-box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
   box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
 }
-
-.botexp{
-  position: absolute;
-  top: 0px;
-  left: 60%;
-}
 .botexp ul{
-  top: -50px;
-  left: 190%;
-}
-.botexp li{
-  display: inline;
-  list-style: none;
-}
-.botexp h5{
-  font-size: 4rem;
-  color: #C3C3C3;
-}
-.botexp h6{
-  font-size: 2rem;  text-align: center;
-  color: #C3C3C3;
+  top: 20px;
+  left: 0%;
 }
 .fabiconarrowexp{
   padding-left: 90%;

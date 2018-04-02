@@ -22,7 +22,7 @@
                   </a>
                 </div>
                 <div class="linkoption col-sm">
-                  <a href="https://www.facebook.com/jonathinsm" target="_blank">
+                  <a href="https://www.facebook.com/jsmcoder/" target="_blank">
                       <img src="/static/img/facebook.png">
                       <b>Facebook</b>
                   </a>
