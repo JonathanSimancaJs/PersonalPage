@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="vacio">
+  <div>
     <Navbar/>
       <h1 class="profile fadeIn delay-1">
         ¿QUIEN

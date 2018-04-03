@@ -8,6 +8,7 @@ import Contact from '@/components/Contact'
 import CallRegister from '@/components/projects/callregister'
 import Places from '@/components/projects/places'
 import TicketIt from '@/components/projects/ticketsit'
+import Createblog from '@/components/blog/Createblog'
 
 Vue.use(Router)
 
@@ -52,6 +53,11 @@ export default new Router({
       path: '/ticketit',
       name: 'TicketIt',
       component: TicketIt
+    },
+    {
+      path: '/createblog',
+      name: 'Createblog',
+      component: Createblog
     }
   ]
 })
