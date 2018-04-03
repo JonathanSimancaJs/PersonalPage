@@ -2,39 +2,35 @@
   <div>
     <Navbar/>
       <div class="container">
-        <div class="row">
-          <div id="blogcont" class="blogcont col-sm-8">
-            <div id="imgblog" class="imgblog">
-              <img src="/static/img/code-2558220_1920.jpg">
-            </div>
-            <div id="blogright" class="blogright">
-              <h1>Otro blog de prueba.</h1>
-              <div class="author">
-                <img src="https://randomuser.me/api/portraits/men/95.jpg"/>
-                <h2><b>Jonathin</b></h2>
+        <div class="card bodyblog">
+          <div v-for="blog in blogs">
+            <div id="blogcont" class="blogcont col-sm-8">
+              <div id="imgblog" class="imgblog">
+                <img v-bind:src="blog.image">
               </div>
-              <div class="separator"></div>
-              <div class="blogparagraph">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing
-                      elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                       ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                         anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <div id="blogright" class="blogright">
+                <h1>{{ blog.title }}</h1>
+                <div class="author">
+                  <img src="https://randomuser.me/api/portraits/men/95.jpg"/>
+                  <h2><b>Jonathin</b></h2>
+                </div>
+                <div class="separator"></div>
+                <div class="blogparagraph">
+                  <p>
+                    {{ blog.content }}
+                  </p>
+                </div>
+                <div class="fabiconarrow">
+                  <router-link to="/showblog/${blog.id}"><i id="fa" class="fa fa-plus-circle"></i></router-link>
+                </div>
               </div>
-              <div class="fabiconarrow">
-                <a href="#"><i id="fa" class="fa fa-plus-circle"></i></a>
+              <div id="bot" class="bot">
+                <h6>{{ blog.date }}</h6>
+                <ul>
+                  <li><i class="fa fa-eye fa-2x"></i>  {{ blog.views }}  </li>
+                  <li><i class="fa fa-thumbs-o-up fa-2x"></i>  {{ blog.likes }}  </li>
+                </ul>
               </div>
-            </div>
-            <div id="bot" class="bot">
-              <h5>29</h5>
-              <h6>MARZO-2018</h6>
-              <ul>
-                <li><i class="fa fa-eye fa-2x"></i></li>
-                <li><i class="fa fa-thumbs-o-up fa-2x"></i></li>
-              </ul>
             </div>
           </div>
           <div class="blogcat col-sm-2">
@@ -55,13 +51,17 @@
 <script>
 import Navbar from '../components/Navbar.vue';
 import Footer from '../components/Footer.vue';
-import Createblog from '../components/blog/Createblog.vue';
+import {db} from '../firebase';
+
+let blogsRef = db.ref('blogs');
 
 export default {
   components: {
     Navbar,
-    Footer,
-    Createblog
+    Footer
+  },
+  firebase: {
+    blogs: blogsRef
   },
   methods:{
   }
@@ -69,6 +69,10 @@ export default {
 </script>
 
 <style lang="css">
+.bodyblog{
+  background: transparent;
+  border: 0px;
+}
 .blogcat{
   text-align: justify;
   margin-top: 100px;
@@ -86,13 +90,14 @@ export default {
   text-align: justify;
   margin-top: 100px;
   margin-bottom: 50px;
-  height: 400px;
+  height: 320px;
   -webkit-box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
   box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
 }
 .imgblog img{
   width: 50%;
+  height: 80%;
   position: absolute;
   top: -30px;
   -webkit-box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.75);
@@ -135,32 +140,28 @@ export default {
 }
 .blogparagraph{
   padding-top: 10px;
-  height: 250px;
+  height: 180px;
   overflow: hidden;
 }
 .bot{
   position: absolute;
-  top: 240px;
+  top: 260px;
 }
 .bot ul{
   position: relative;
-  top: -50px;
+  top: -45px;
   left: 190%;
 }
 .bot li{
   display: inline;
   list-style: none;
 }
-.bot h5{
-  font-size: 4rem;
-  color: #C3C3C3;
-}
 .bot h6{
   font-size: 2rem;
   color: #C3C3C3;
 }
 .fabiconarrow{
-  padding-top: 20px;
+  padding-top: 10px;
   padding-left: 60%;
 }
 .fa-plus-circle{

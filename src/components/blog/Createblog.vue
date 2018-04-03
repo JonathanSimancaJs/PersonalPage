@@ -6,7 +6,7 @@
         <div class="form-group row">
           <label for="example-date-input" class="col-2 col-form-label">Fecha</label>
           <div class="col-10">
-            <input v-model="newBlog.date" class="form-control" type="date" value="2011-08-19" id="example-date-input">
+            <input v-model="newBlog.date" class="form-control" type="date" value="19-08-2011" id="example-date-input">
           </div>
         </div>
         <form role="form" v-on:submit.prevent='addblog'>
@@ -40,7 +40,8 @@
 <script>
 import Navbar from '../../components/Navbar.vue';
 import Footer from '../../components/Footer.vue';
-
+import {db} from '../../firebase';
+/*
 import Firebase from 'firebase';
 
 var config = {
@@ -53,7 +54,7 @@ var config = {
 };
 let app = Firebase.initializeApp(config);
 const db = app.database()
-
+*/
 let blogsRef = db.ref('blogs');
 
 export default {

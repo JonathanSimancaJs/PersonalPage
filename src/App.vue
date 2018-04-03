@@ -33,6 +33,15 @@ body{
   background-size: 100%;
   background-attachment: fixed;*/
 }
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
+a:active{
+  text-decoration: none;
+}
 
 /*Animation of elements*/
 

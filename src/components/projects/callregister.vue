@@ -57,12 +57,6 @@ export default {
 .detaillist li{
   list-style: none;
 }
-.detaillist a{
-  text-decoration: none;
-}
-.detaillist a:hover{
-  text-decoration: none;
-}
 .galery img{
   margin-bottom: 40px;
   width: 90%;
