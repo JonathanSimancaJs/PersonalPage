@@ -20,8 +20,8 @@
                     {{ blog.content }}
                   </p>
                 </div>
-                <div class="fabiconarrow">
-                  <router-link to="/showblog/${blog.id}"><i id="fa" class="fa fa-plus-circle"></i></router-link>
+                <div class="fabiconbutton">
+                  <router-link :to="{ name: 'blog', params: {id: blog.date } }"><i id="fa" class="fa fa-plus-circle"></i></router-link>
                 </div>
               </div>
               <div id="bot" class="bot">
@@ -150,7 +150,7 @@ export default {
 .bot ul{
   position: relative;
   top: -45px;
-  left: 190%;
+  left: 110%;
 }
 .bot li{
   display: inline;
@@ -160,7 +160,7 @@ export default {
   font-size: 2rem;
   color: #C3C3C3;
 }
-.fabiconarrow{
+.fabiconbutton{
   padding-top: 10px;
   padding-left: 60%;
 }

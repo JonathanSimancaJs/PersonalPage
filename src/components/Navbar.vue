@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div>
-        <router-link to="/">
+        <router-link :to="{ name: 'start' }">
           <img src="/static/img/logotatan.png" id="logonav">
         </router-link>
       </div>
@@ -11,16 +11,16 @@
       <div class="navbarmain">
         <div class="navbuttons">
           <div id="hexagon">
-            <router-link to="/profile"><i class="fa fa-user"></i></router-link>
+            <router-link :to="{ name: 'profile'}"><i class="fa fa-user"></i></router-link>
           </div>
           <div id="hexagon">
-            <router-link to="/work"><i class="fa fa-briefcase"></i></router-link>
+            <router-link :to="{ name: 'work' }"><i class="fa fa-briefcase"></i></router-link>
           </div>
           <div id="hexagon">
-            <router-link to="/post"><i class="fa fa-rss-square"></i></router-link>
+            <router-link :to="{ name: 'post' }"><i class="fa fa-rss-square"></i></router-link>
           </div>
           <div id="hexagon">
-            <router-link to="/contact"><i class="fa fa-envelope"></i></router-link>
+            <router-link :to="{ name: 'contact' }"><i class="fa fa-envelope"></i></router-link>
           </div>
           </div>
         </div>

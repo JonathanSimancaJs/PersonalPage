@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
     <Navbar/>
-      <h1 class="profile fadeIn delay-1">
+      <h1 class="profile fadeIn delay-1" id="profile">
         ¿QUIEN
         <br>
         SOY?
@@ -13,7 +13,7 @@
           Hace seis años decidí casarme, gracias a ello vivo feliz con mi esposa y dos hermosos retoños,
           Santiago mi niño travieso y Sofia la princesa de papá. Mi familia es el motor de mi vida y ellos me dan la
           fuerza para superar cualquier obstáculo.</p>
-      <img src="/static/img/IMG_20180317_140700.jpg" class="avatar fadeIn">
+      <img src="/static/img/profile.jpg" class="avatar fadeIn">
       <div class="container text-justify cont2 handcont fadeIn">
         <div class="row">
             <div class="col-sm-6 card">
@@ -109,6 +109,18 @@ export default {
   components: {
     Navbar,
     Footer
+  },
+  mounted() {
+      let t = setInterval(() => {
+          if (document.readyState === 'complete') {
+              // run after page has finished loadin
+              if (screen.width < 1024) {
+                document.getElementById('profile').style.top="20%";
+                document.getElementById('profile').style.left="10%";
+              }
+              clearInterval(t)
+          }
+      }, 500)
   }
 }
 </script>
@@ -120,31 +132,34 @@ export default {
 }
 .avatar{
   transform: translate(90px,80px);
-  width: 952px;
-  height: 635px;
+  width: 50%;
+  height: 10%;
   z-index: 2;
   border-radius: 5px;
 }
 .profile{
-  top: 450px;
-  left: 5%;
+  top: 40%;
+  left: 20%;
   position: absolute;
   z-index: 1;
   font-size: 80px;
-  color: #000;
+  color: #16A085;
 }
 .profdes{
-  top: 650px;
-  left: 5%;
+  top: 62%;
+  left: 20%;
   max-width: 400px;
   position: absolute;
   z-index: 1;
-  background: #A5A5A5;
+  background: #8cc84b;
   padding: 10px;
   border-radius: 5px;
 }
 .cont2{
 margin-top: 85px;
+-webkit-box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
 }
 .ctextlogo{
   font-size: 15px;

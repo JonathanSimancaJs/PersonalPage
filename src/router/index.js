@@ -9,7 +9,7 @@ import CallRegister from '@/components/projects/callregister'
 import Places from '@/components/projects/places'
 import TicketIt from '@/components/projects/ticketsit'
 import Createblog from '@/components/blog/Createblog'
-import Showblog from '@/components/blog/Showblog'
+import Blog from '@/components/blog/Blog'
 
 Vue.use(Router)
 
@@ -17,53 +17,53 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Start',
+      name: 'start',
       component: Start
     },
     {
       path: '/profile',
-      name: 'Profile',
+      name: 'profile',
       component: Profile
     },
     {
       path: '/work',
-      name: 'Work',
+      name: 'work',
       component: Work
     },
     {
       path: '/post',
-      name: 'Post',
+      name: 'post',
       component: Post
     },
     {
       path: '/contact',
-      name: 'Contact',
+      name: 'contact',
       component: Contact
     },
     {
       path: '/callregister',
-      name: 'CallRegister',
+      name: 'callregister',
       component: CallRegister
     },
     {
       path: '/places',
-      name: 'Places',
+      name: 'places',
       component: Places
     },
     {
       path: '/ticketit',
-      name: 'TicketIt',
+      name: 'ticketit',
       component: TicketIt
     },
     {
       path: '/createblog',
-      name: 'Createblog',
+      name: 'createblog',
       component: Createblog
     },
     {
-      path: '/showblog:id',
-      name: 'Showblog',
-      component: Showblog
+      path: '/blog:id',
+      name: 'blog',
+      component: Blog
     }
   ]
 })
