@@ -59,8 +59,6 @@ export default {
         content:'',
         category:'',
         image:'',
-        views:0,
-        likes:0,
         date:''
       }
     }

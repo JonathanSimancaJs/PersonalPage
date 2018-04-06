@@ -114,7 +114,7 @@ export default {
       let t = setInterval(() => {
           if (document.readyState === 'complete') {
               // run after page has finished loadin
-              if (screen.width < 1024) {
+              if (screen.width <= 1024) {
                 document.getElementById('profile').style.top="20%";
                 document.getElementById('profile').style.left="10%";
               }

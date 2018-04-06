@@ -4,14 +4,14 @@
       <div class="container">
         <div class="card bodyblog">
           <div v-for="blog in blogs">
-            <div id="blogcont" class="blogcont col-sm-8">
-              <div id="imgblog" class="imgblog">
+            <div class="blogcont col-sm-8">
+              <div class="imgblog">
                 <img v-bind:src="blog.image">
               </div>
-              <div id="blogright" class="blogright">
+              <div class="blogright">
                 <h1>{{ blog.title }}</h1>
                 <div class="author">
-                  <img src="https://randomuser.me/api/portraits/men/95.jpg"/>
+                  <img src="https://c.disquscdn.com/uploads/users/13602/2678/avatar92.jpg?1523037386"/>
                   <h2><b>Jonathin</b></h2>
                 </div>
                 <div class="separator"></div>
@@ -21,15 +21,11 @@
                   </p>
                 </div>
                 <div class="fabiconbutton">
-                  <router-link :to="{ name: 'blog', params: {id: blog.date } }"><i id="fa" class="fa fa-plus-circle"></i></router-link>
+                  <router-link :to="{ name: 'blog', params: {id: blog['.key'] } }"><i class="fa fa-plus-circle"></i></router-link>
                 </div>
               </div>
-              <div id="bot" class="bot">
+              <div class="bot">
                 <h6>{{ blog.date }}</h6>
-                <ul>
-                  <li><i class="fa fa-eye fa-2x"></i>  {{ blog.views }}  </li>
-                  <li><i class="fa fa-thumbs-o-up fa-2x"></i>  {{ blog.likes }}  </li>
-                </ul>
               </div>
             </div>
           </div>
@@ -38,7 +34,7 @@
             <ul>
               <li>Ultimos</li>
               <li>Hardware</li>
-              <li>Programación</li>
+              <li v-on:click="consultCat(blogs)">Programación</li>
               <li>Novedades</li>
             </ul>
           </div>
@@ -64,12 +60,20 @@ export default {
     blogs: blogsRef
   },
   methods:{
+    consultCat: function(blogs){
+      var categ
+      console.log(blogs)
+      for(var data in blogs){
+        console.log(data);
+      }
+    }
   }
 }
 </script>
 
 <style lang="css">
 .bodyblog{
+  margin-top: 50px;
   background: transparent;
   border: 0px;
 }
@@ -88,7 +92,7 @@ export default {
 }
 .blogcont{
   text-align: justify;
-  margin-top: 100px;
+  margin-top: 40px;
   margin-bottom: 50px;
   height: 320px;
   -webkit-box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
@@ -140,21 +144,13 @@ export default {
 }
 .blogparagraph{
   padding-top: 10px;
+  padding-right: 10px;
   height: 180px;
   overflow: hidden;
 }
 .bot{
   position: absolute;
   top: 260px;
-}
-.bot ul{
-  position: relative;
-  top: -45px;
-  left: 110%;
-}
-.bot li{
-  display: inline;
-  list-style: none;
 }
 .bot h6{
   font-size: 2rem;

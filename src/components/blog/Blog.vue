@@ -2,16 +2,15 @@
   <div>
     <Navbar/>
     <div v-for="blog in blogs">
-      <div v-if="blog.date == $route.params.id">
+      <div v-if="blog['.key'] == $route.params.id">
         <div class="container">
           <div class="blogcontexp col-sm-12">
             <div class="imgblogexp">
               <img v-bind:src="blog.image">
             </div>
             <div class="blogbody">
-              <h1>{{ blog.title }}</h1>
-              <div class="author">
-                <img src="https://randomuser.me/api/portraits/men/95.jpg"/>
+              <div class="authorexp">
+                <img src="https://c.disquscdn.com/uploads/users/13602/2678/avatar92.jpg?1523037386"/>
                 <h2><b>Jonathin</b></h2>
               </div>
               <div class="separator"></div>
@@ -20,15 +19,17 @@
                   {{ blog.content }}
                 </p>
               </div>
+              <div class="comments">
+                 <VueDisqus shortname="deployblog"></VueDisqus>
+               </div>
             </div>
             <div class="botexp">
-              <h6>{{ blog.date }}</h6>
+              <h6 id="date">{{ blog.date }}</h6>
+              <h1>{{ blog.title }}</h1>
               <ul>
                 <li><router-link :to="{ name: 'post' }">
                   <i class="fa fa-arrow-circle-left fa-2x"></i>
                 </router-link></li>
-                <li><i class="fa fa-eye fa-2x"></i>  {{ blog.views }}  </li>
-                <li><i class="fa fa-thumbs-o-up fa-2x"></i>  {{ blog.likes }}  </li>
               </ul>
             </div>
           </div>
@@ -42,12 +43,14 @@
 <script>
 import Navbar from '../../components/Navbar.vue';
 import Footer from '../../components/Footer.vue';
+import VueDisqus from 'vue-disqus/VueDisqus.vue'
 import {db} from '../../firebase';
 let blogsRef = db.ref('blogs');
 export default {
   components: {
     Navbar,
-    Footer
+    Footer,
+    VueDisqus
   },
   firebase: {
     blogs: blogsRef
@@ -85,12 +88,37 @@ export default {
 }
 .blogparagraphexp{
   padding-top: 10px;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-bottom: 10px;
   overflow: hidden;
+}
+.authorexp{
+  margin-left: 20%;
+  background-color : #333;
+	height : 30px;
+	width : 110px;
+	border-radius : 20px;
+}
+.authorexp h2 {
+  padding-top : 8px;
+	margin-right : 10px;
+	text-align : right;
+	font-size : 0.8rem;
+	color :#fff;
+}
+.authorexp img {
+  padding-top: 5px;
+  margin-left: 10px;
+  float: left;
+  height: 25px;
+  width: 25px;
+  border-radius: 30%;
 }
 .botexp{
   position: absolute;
   top: 50px;
-  left: 70%;
+  left: 65%;
 }
 .botexp ul{
   position: relative;
