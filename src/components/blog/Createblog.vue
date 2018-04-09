@@ -13,7 +13,12 @@
               </div>
               <div class="form-group">
                 <label for="ejemplo_password_1">Contenido</label>
-                <textarea v-model="newBlog.content" rows="8" cols="80"></textarea>
+                  <ckeditor
+                    v-model="newBlog.content"
+                    :config="config"
+                    @blur="onBlur($event)"
+                    @focus="onFocus($event)">
+                  </ckeditor>
               </div>
               <div class="form-group">
                 <input v-model="newBlog.image" type="text" class="form-control" placeholder="Url imagen">
@@ -21,11 +26,13 @@
               <div class="form-group">
                 <label for="exampleSelect1">Categoria</label>
                 <select v-model="newBlog.category" class="form-control" id="exampleSelect1">
-                  <option>Programación</option>
+                  <option>Actualidad</option>
+                  <option>Aplicaciones</option>
                   <option>Hardware</option>
-                  <option>Peliculas</option>
+                  <option>Juegos</option>
+                  <option>Películas</option>
+                  <option>Programación</option>
                   <option>Series</option>
-                  <option>Novedades</option>
                 </select>
               </div>
               <button type="submit" class="btn btn-primary">Enviar</button>
@@ -40,6 +47,7 @@
 <script>
 import Navbar from '../../components/Navbar.vue';
 import Footer from '../../components/Footer.vue';
+import Ckeditor from 'vue-ckeditor2'
 import {db} from '../../firebase';
 
 let blogsRef = db.ref('blogs');
@@ -47,7 +55,8 @@ let blogsRef = db.ref('blogs');
 export default {
   components: {
     Navbar,
-    Footer
+    Footer,
+    Ckeditor
   },
   firebase: {
     blogs: blogsRef
@@ -60,10 +69,23 @@ export default {
         category:'',
         image:'',
         date:''
+      },
+      content:'',
+      config: {
+        toolbar:[
+          [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript' ]
+        ],
+        height:300
       }
     }
   },
   methods:{
+    onBlur (editor) {
+      console.log(editor)
+    },
+    onFocus (editor) {
+      console.log(editor)
+    },
     addblog: function(){
       var time = new Date();
       var hour = time.getHours();
@@ -95,6 +117,10 @@ export default {
       total=script;
       this.newBlog.date=total;
       blogsRef.push(this.newBlog);
+      this.newBlog.title = '';
+      this.newBlog.content = '';
+      this.newBlog.image = '';
+      this.newBlog.category = '';
     }
   }
 }

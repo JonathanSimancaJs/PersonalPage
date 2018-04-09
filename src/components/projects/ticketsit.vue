@@ -7,16 +7,13 @@
         </div>
         <div class="row">
           <div class="col-sm-6 paragraph">
-            <p>Es la aplicación web más reciente que he desarrollado. En mi último empleo
-               había estado trabajando con una mesa de ayuda, brindando soporte técnico y
-               registrando solicitudes de servicio. El sistema que usábamos para la gestión
-                no nos permitía validar de manera fácil la cantidad casos que habíamos
-                gestionado, adicionalmente usábamos plantillas en Word o Excel para registrar
-                 los datos de una llamada. Entonces decidí crear esta aplicación para usarla
-                  con mis compañeros de trabajo, mediante el uso de un formulario web podíamos
-                   registrar los datos de la llamada y del caso de manera más eficiente, permitía
-                    guardar en un histórico el cual podíamos consultar fácilmente para ver
-                    qué cantidad de casos habíamos creado.</p>
+            <p>Cuando inicie en los oscuros senderos de la programación, estaba probando muchas cosas,
+               empecé con Java, luego pase a Python, vi un poco de Golang y me resigne a quedarme con PHP
+                ya que no comprendía muy bien a los anteriores. Entonces decidí realizar mi primer proyecto
+                 serio pasa saber si definitivamente servía para esto o no. Como siempre he trabajado en soporte,
+                  pensé en crear una sistema de gestión de tickets de soporte técnico y el resultado fue sorprendente,
+                   pude crear mi primera aplicación web funcional, domine algunos conceptos de bases de datos relacionales con Mysql,
+                    el uso del Modelo Vista Controlador y construcción de interfaces web.</p>
           </div>
           <div class="col-sm-4 text-left detaillist fadeIn delay-1">
             <ul>
@@ -24,22 +21,89 @@
               <li><b>Año:</b> 2017</li>
               <li><b>Repositorio GitHub:</b><a href="https://github.com/JonathanSimancaJs/CoursePHP/tree/master/Medivhtest" target="_blank">
                 https://github.com/JonathanSimancaJs/CoursePHP/tree/master/Medivhtest</a></li>
+              <li><router-link :to="{ name: 'work' }">
+                <i class="fa fa-arrow-circle-left fa-2x"></i>
+              </router-link></li>
             </ul>
           </div>
         </div>
         <div class="galery fadeIn delay-2">
-          <img src="/static/img/ticket01.png">
-          <img src="/static/img/ticket02.png">
-          <img src="/static/img/ticket03.png">
-          <img src="/static/img/ticket04.png">
-          <img src="/static/img/ticket05.png">
-          <img src="/static/img/ticket06.png">
-          <img src="/static/img/ticket07.png">
-          <img src="/static/img/ticket08.png">
-          <img src="/static/img/ticket10.png">
-          <img src="/static/img/ticket11.png">
-          <img src="/static/img/ticket13.png">
-          <img src="/static/img/ticket14.png">
+          <ul class="slides">
+              <input type="radio" name="radio-btn" id="img-1" checked />
+              <li class="slide-container">
+          		<div class="slide">
+          			<img src="/static/img/ticket01.png" />
+                  </div>
+          		<div class="nav">
+          			<label for="img-6" class="prev">&#x2039;</label>
+          			<label for="img-2" class="next">&#x203a;</label>
+          		</div>
+              </li>
+
+              <input type="radio" name="radio-btn" id="img-2" />
+              <li class="slide-container">
+                  <div class="slide">
+                    <img src="/static/img/ticket02.png" />
+                  </div>
+          		<div class="nav">
+          			<label for="img-1" class="prev">&#x2039;</label>
+          			<label for="img-3" class="next">&#x203a;</label>
+          		</div>
+              </li>
+
+              <input type="radio" name="radio-btn" id="img-3" />
+              <li class="slide-container">
+                  <div class="slide">
+                    <img src="/static/img/ticket03.png" />
+                  </div>
+          		<div class="nav">
+          			<label for="img-2" class="prev">&#x2039;</label>
+          			<label for="img-4" class="next">&#x203a;</label>
+          		</div>
+              </li>
+
+              <input type="radio" name="radio-btn" id="img-4" />
+              <li class="slide-container">
+                  <div class="slide">
+                    <img src="/static/img/ticket04.png" />
+                  </div>
+          		<div class="nav">
+          			<label for="img-3" class="prev">&#x2039;</label>
+          			<label for="img-5" class="next">&#x203a;</label>
+          		</div>
+              </li>
+
+              <input type="radio" name="radio-btn" id="img-5" />
+              <li class="slide-container">
+                  <div class="slide">
+                    <img src="/static/img/ticket05.png" />
+                  </div>
+          		<div class="nav">
+          			<label for="img-4" class="prev">&#x2039;</label>
+          			<label for="img-6" class="next">&#x203a;</label>
+          		</div>
+              </li>
+
+              <input type="radio" name="radio-btn" id="img-6" />
+              <li class="slide-container">
+                  <div class="slide">
+                    <img src="/static/img/ticket06.png" />
+                  </div>
+          		<div class="nav">
+          			<label for="img-5" class="prev">&#x2039;</label>
+          			<label for="img-1" class="next">&#x203a;</label>
+          		</div>
+              </li>
+
+              <li class="nav-dots">
+                <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+                <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+                <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+                <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+                <label for="img-5" class="nav-dot" id="img-dot-5"></label>
+                <label for="img-6" class="nav-dot" id="img-dot-6"></label>
+              </li>
+          </ul>
         </div>
       </div>
     <Footer/>
@@ -72,10 +136,5 @@ export default {
 }
 .detaillist a{
   font-size: 12px;
-}
-.galery img{
-  padding-top: 20px;
-  width: 90%;
-  box-shadow: 0 16px 22px rgba(0,0,0,.12);
 }
 </style>

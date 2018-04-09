@@ -4,20 +4,17 @@
     <div v-for="blog in blogs">
       <div v-if="blog['.key'] == $route.params.id">
         <div class="container">
-          <div class="blogcontexp col-sm-12">
+          <div class="blogcontexp col-sm-12 fadeIn">
             <div class="imgblogexp">
               <img v-bind:src="blog.image">
             </div>
             <div class="blogbody">
               <div class="authorexp">
-                <img src="https://c.disquscdn.com/uploads/users/13602/2678/avatar92.jpg?1523037386"/>
+                <img src="https://c.disquscdn.com/uploads/users/13602/2678/avatar92.jpg?1523074710"/>
                 <h2><b>Jonathin</b></h2>
               </div>
               <div class="separator"></div>
-              <div class="blogparagraphexp">
-                <p>
-                  {{ blog.content }}
-                </p>
+              <div class="blogparagraphexp" id="contblog">
               </div>
               <div class="comments">
                  <VueDisqus shortname="deployblog"></VueDisqus>
@@ -47,6 +44,13 @@ import VueDisqus from 'vue-disqus/VueDisqus.vue'
 import {db} from '../../firebase';
 let blogsRef = db.ref('blogs');
 export default {
+  mounted(){
+    var blogs = this.blogs;
+    blogs = blogs.filter(blog => {
+      return blog['.key'] === this.$route.params.id;
+    })
+    document.getElementById('contblog').innerHTML=blogs[0].content;
+  },
   components: {
     Navbar,
     Footer,
@@ -54,15 +58,19 @@ export default {
   },
   firebase: {
     blogs: blogsRef
+  },
+  methods:{
+    getparra:function(p){
+    }
   }
 }
 </script>
 
 <style lang="css">
 .blogcontexp{
+  background: #fff;
   text-align: justify;
   margin-top: 100px;
-  margin-botexptom: 50px;
   height: auto;
   -webkit-box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
@@ -82,7 +90,7 @@ export default {
   width: 100%;
 }
 .blogbody h1 {
-  text-align: center;
+  text-align: left;
   padding-top: 10px;
   font-size: 1.5rem;
 }

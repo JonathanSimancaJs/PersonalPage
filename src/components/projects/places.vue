@@ -7,16 +7,14 @@
         </div>
         <div class="row">
           <div class="col-sm-6 paragraph">
-            <p>Es la aplicación web más reciente que he desarrollado. En mi último empleo
-               había estado trabajando con una mesa de ayuda, brindando soporte técnico y
-               registrando solicitudes de servicio. El sistema que usábamos para la gestión
-                no nos permitía validar de manera fácil la cantidad casos que habíamos
-                gestionado, adicionalmente usábamos plantillas en Word o Excel para registrar
-                 los datos de una llamada. Entonces decidí crear esta aplicación para usarla
-                  con mis compañeros de trabajo, mediante el uso de un formulario web podíamos
-                   registrar los datos de la llamada y del caso de manera más eficiente, permitía
-                    guardar en un histórico el cual podíamos consultar fácilmente para ver
-                    qué cantidad de casos habíamos creado.</p>
+            <p>Es una REST API, me encontraba muy interesado en como servir datos mediante una aplicación
+               y consumirlos mediante otra, entonces realice un curso en <a href="https://codigofacilito.com/" target="_blank">CodigoFacilito</a>, en donde aprendí
+                todo los conceptos mas importante de este modelo de diseño web y como aplicarlo en una situación real.
+                 El ejercicio realizado consiste en una aplicación web progresiva que permite al usuario registrarse
+                  o consultar los negocios ubicados en su zona como: restaurantes, bares, comidas rápidas etc. En el
+                   Backend mediante MongoDB y Node.js me encargue de servir los datos de la aplicación con procesos
+                    seguros de autenticación. En el Frontend mediante React.js y Redux, me engarce de recibir los datos
+                     y mostrarlos en una interfaz web..</p>
           </div>
           <div class="col-sm-4 text-left detaillist fadeIn delay-1">
             <ul>
@@ -27,15 +25,89 @@
                 https://github.com/JonathanSimancaJs/RestApiPlacesFront</a></li>
                 <li><a href="https://github.com/JonathanSimancaJs/RestApiPlacesBack" target="_blank">
                   https://github.com/JonathanSimancaJs/RestApiPlacesBack</a></li>
+                <li><router-link :to="{ name: 'work' }">
+                    <i class="fa fa-arrow-circle-left fa-2x"></i>
+                </router-link></li>
             </ul>
           </div>
         </div>
         <div class="galery fadeIn delay-2">
-          <img src="/static/img/places01.png">
-          <img src="/static/img/places02.png">
-          <img src="/static/img/places03.png">
-          <img src="/static/img/places04.png">
-          <img src="/static/img/places05.png">
+          <ul class="slides">
+              <input type="radio" name="radio-btn" id="img-1" checked />
+              <li class="slide-container">
+          		<div class="slide">
+          			<img src="/static/img/places01.png" />
+                  </div>
+          		<div class="nav">
+          			<label for="img-6" class="prev">&#x2039;</label>
+          			<label for="img-2" class="next">&#x203a;</label>
+          		</div>
+              </li>
+
+              <input type="radio" name="radio-btn" id="img-2" />
+              <li class="slide-container">
+                  <div class="slide">
+                    <img src="/static/img/places02.png" />
+                  </div>
+          		<div class="nav">
+          			<label for="img-1" class="prev">&#x2039;</label>
+          			<label for="img-3" class="next">&#x203a;</label>
+          		</div>
+              </li>
+
+              <input type="radio" name="radio-btn" id="img-3" />
+              <li class="slide-container">
+                  <div class="slide">
+                    <img src="/static/img/places03.png" />
+                  </div>
+          		<div class="nav">
+          			<label for="img-2" class="prev">&#x2039;</label>
+          			<label for="img-4" class="next">&#x203a;</label>
+          		</div>
+              </li>
+
+              <input type="radio" name="radio-btn" id="img-4" />
+              <li class="slide-container">
+                  <div class="slide">
+                    <img src="/static/img/places04.png" />
+                  </div>
+          		<div class="nav">
+          			<label for="img-3" class="prev">&#x2039;</label>
+          			<label for="img-5" class="next">&#x203a;</label>
+          		</div>
+              </li>
+
+              <input type="radio" name="radio-btn" id="img-5" />
+              <li class="slide-container">
+                  <div class="slide">
+                    <img src="/static/img/places05.png" />
+                  </div>
+          		<div class="nav">
+          			<label for="img-4" class="prev">&#x2039;</label>
+          			<label for="img-6" class="next">&#x203a;</label>
+          		</div>
+              </li>
+
+              <input type="radio" name="radio-btn" id="img-6" />
+              <li class="slide-container">
+                  <div class="slide">
+                    <img src="/static/img/places06.png" />
+                  </div>
+          		<div class="nav">
+          			<label for="img-5" class="prev">&#x2039;</label>
+          			<label for="img-1" class="next">&#x203a;</label>
+          		</div>
+              </li>
+
+              <li class="nav-dots">
+                <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+                <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+                <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+                <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+                <label for="img-5" class="nav-dot" id="img-dot-5"></label>
+                <label for="img-6" class="nav-dot" id="img-dot-6"></label>
+              </li>
+          </ul>
         </div>
       </div>
     <Footer/>
@@ -65,10 +137,5 @@ export default {
 }
 .detaillist a:hover{
   text-decoration: none;
-}
-.galery img{
-  padding-top: 20px;
-  width: 90%;
-  box-shadow: 0 16px 22px rgba(0,0,0,.12);
 }
 </style>

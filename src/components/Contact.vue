@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="">
+  <div>
     <Navbar/>
     <div class="container pcont fadeIn">
       <div class="mycard">
@@ -73,13 +73,12 @@ export default {
 .mycard{
   box-sizing:border-box;
   margin-top: 100px;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 .containercard {
   width: 600px;
   height: 340px;
   margin: 0 auto;
-  margin-bottom: 40px;
   position: relative;
   -webkit-perspective: 1000;
 	-moz-perspective: 1000;

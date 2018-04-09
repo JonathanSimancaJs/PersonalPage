@@ -6,11 +6,11 @@
         <br>
         SOY?
       </h1>
-        <p class="profdes text-justify fadeIn delay-2">San Carlos – Córdoba es mi tierra natal, más exactamente provengo de una vereda llamada “La coroza”.
+        <p id="parprofile" class="profdes text-justify fadeIn delay-2">San Carlos – Córdoba es mi tierra natal, más exactamente provengo de una vereda llamada “La coroza”.
           Han sido tantas las experiencias que me han llevado por la vida y heme aquí en Bogotá. Aunque llevo mi tierra en el corazón,
           también me he encariñado con esta ciudad.
           <br>
-          Hace seis años decidí casarme, gracias a ello vivo feliz con mi esposa y dos hermosos retoños,
+          Hace seis años decidí casarme, gracias a ello vivo feliz con mi esposa y dos hermosos hijos,
           Santiago mi niño travieso y Sofia la princesa de papá. Mi familia es el motor de mi vida y ellos me dan la
           fuerza para superar cualquier obstáculo.</p>
       <img src="/static/img/profile.jpg" class="avatar fadeIn">
@@ -23,8 +23,8 @@
                 analista de soporte técnico en varias compañías, gracias a ello he adquirido una vasta experiencia  y conocimientos
                 en temas de: Redes, Servidores, Sistemas operativos, Ofimática, Software utilitario, Itil, entre otros.</p>
               <p>Con el tiempo descubrí que mi verdadera pasión era la programación así que por mi cuenta me dedique a estudiar
-                y aprender tecnólogas referentes al desarrollo web tales como: Mysql, PHP, CSS, Javascript y otras que están
-                adquiriendo gran importancia en el mercado. Actualmente me encuentro estudiando una tecnología en Análisis y desarrollo
+                y aprender tecnólogas referentes al desarrollo web tales como: Mysql, PHP, CSS, Javascript y otras.
+                 Actualmente me encuentro estudiando una tecnología en Análisis y desarrollo
                 de sistemas de información en el SENA y cada día me dedico a aprender más de este apasionante mundo. </p>
               <p>En cuanto a la parte de idiomas, debo admitir que hace algunos años no me interesaba para nada aprender,
                 pero descubrí durante mi experiencia como técnico y programador, que el idioma ingles es de vital importancia,
@@ -33,15 +33,15 @@
                  un nivel intermedio, en este momento puedo leer textos, comprender audios, conversaciones y hablarlo solo un poco
                   pero aún sigo trabajando en ello. </p>
               <h4>Habilidades</h4>
-              <p>Lo mío son las aplicaciones Web y cuando me entere que JavaScript corría del lado del servidor me pareció tan genial
-                 que quise saber más al respecto, al ver todas las tecnologías que existen para construir aplicaciones con solo
+              <p>Por ahora solo me he enfocado en desarrollar aplicaciones Web, cuando me entere que JavaScript corría del lado del servidor me pareció tan genial
+                 que quise saber más al respecto. Al descubrir todas las tecnologías que existen para construir sitios con solo
                  JavaScript tanto en el Backend como en el Frontend, término por convertirse en mi lenguaje de programación favorito
                   y por ello me dedique a ser un desarrollador Full Stack en este lenguaje.</p>
             </div>
             <div class="col-sm-6 card">
-              <p>Así que para el proceso de desarrollo de una aplicación Web me encanto trabajar con el Stack MEVN, ya que me pareció
+              <p>En el proceso de desarrollo de una aplicación Web me encanto trabajar con el Stack MEVN, ya que me pareció
                  sencillo, rápido y sin tantas complicaciones, a continuación describo como se compone este Stack y adicionalmente
-                  menciono un conjunto de herramientas adicionales que suelo usar en el desarrollo de aplicaciones web :</p>
+                  menciono un conjunto de herramientas adicionales que suelo usar en el desarrollo de proyectos:</p>
               <div class="row">
                 <div class="col-sm-5">
                   <img src="/static/img/mysql.png" class="logos">
@@ -92,7 +92,7 @@
                   <img src="/static/img/bootstrap.jpg" class="logos">
                 </div>
                 <div class="col-sm ctextlogo">
-                  <p>Galería de elementos para el desarrollo y diseño Web.</p>
+                  <p>Librería de estilos para diseño Web.</p>
                 </div>
               </div>
           </div>
@@ -111,16 +111,12 @@ export default {
     Footer
   },
   mounted() {
-      let t = setInterval(() => {
-          if (document.readyState === 'complete') {
-              // run after page has finished loadin
-              if (screen.width <= 1024) {
-                document.getElementById('profile').style.top="20%";
-                document.getElementById('profile').style.left="10%";
-              }
-              clearInterval(t)
-          }
-      }, 500)
+    if (window.innerWidth <= 1300) {
+      document.getElementById('profile').style.top="30%";
+      document.getElementById('profile').style.left="5%";
+      document.getElementById('parprofile').style.top="50%";
+      document.getElementById('parprofile').style.left="5%";
+    }
   }
 }
 </script>
@@ -166,7 +162,8 @@ box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
   padding-top: 20px;
 }
 .card{
-  padding-bottom: 50px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 </style>

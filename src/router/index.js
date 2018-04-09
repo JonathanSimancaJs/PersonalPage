@@ -14,6 +14,8 @@ import Blog from '@/components/blog/Blog'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
+  base: __dirname,
   routes: [
     {
       path: '/',
@@ -56,7 +58,7 @@ export default new Router({
       component: TicketIt
     },
     {
-      path: '/createblog',
+      path: '/cmpb',
       name: 'createblog',
       component: Createblog
     },

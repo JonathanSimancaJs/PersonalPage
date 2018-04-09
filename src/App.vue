@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -26,18 +26,18 @@ export default {
   margin-top: 60px;
 }
 body{
-  background-color: #f6f6f6;
-  /*
-  background-image: url(/static/img/ricepaper.png);
+  background-image: url(/static/img/back01.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
-  background-attachment: fixed;*/
+  background-attachment: fixed;
 }
 a{
   text-decoration: none;
+  color: #000;
 }
 a:hover{
   text-decoration: none;
+  color: #b3b3b3;
 }
 a:active{
   text-decoration: none;
@@ -83,7 +83,7 @@ a:active{
   display: inline-block;
 }
 
-.fa.fa-user, .fa.fa-briefcase, .fa.fa-rss-square, .fa.fa-envelope{
+.fa.fa-user, .fa.fa-briefcase, .fa.fa-rss-square, .fa.fa-envelope, .fa-phone-square, .fa-hand-o-lef{
   color: white;
   font-size: 50px;
   line-height: 60px;

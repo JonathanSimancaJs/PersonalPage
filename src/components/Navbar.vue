@@ -3,11 +3,11 @@
     <div class="row">
       <div>
         <router-link :to="{ name: 'start' }">
-          <img src="/static/img/logotatan.png" id="logonav">
+          <img class="logonav" src="/static/img/logotatan.png">
         </router-link>
       </div>
-      <div class="col-sm-1 divhide">
-      </div>
+        <div class="col-sm-1 divhide">
+        </div>
       <div class="navbarmain">
         <div class="navbuttons">
           <div id="hexagon">
@@ -20,14 +20,11 @@
             <router-link :to="{ name: 'post' }"><i class="fa fa-rss-square"></i></router-link>
           </div>
           <div id="hexagon">
-            <router-link :to="{ name: 'contact' }"><i class="fa fa-envelope"></i></router-link>
-          </div>
+            <router-link :to="{ name: 'contact' }"><i class="fa fa-phone-square"></i></router-link>
           </div>
         </div>
       </div>
-        </div>
       </div>
-    </div>
   </div>
 </template>
 
@@ -37,7 +34,7 @@ export default {
 </script>
 
 <style lang="css">
-#logonav{
+.logonav{
   width: 150px;
   height: 150px;
   border-radius: 5px;

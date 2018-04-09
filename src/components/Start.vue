@@ -2,9 +2,23 @@
   <div class="container handcont">
     <div class="row">
       <div class="col-sm-7 handmain fadeIn">
-        <h1>Jonathan Simanca Mora
-          <br>
-          Desarrollador Full Stack Javascript.</h1>
+        <h1 class="myname">Jonathan Simanca Mora</h1>
+        <div>
+          <div id="home-news">
+            <div class="home_header">
+              <strong>Desarrollador</strong>
+              <span>Backend</span>
+            </div>
+            <div class="home_header">
+              <strong>Javascript</strong>
+              <span>Full Stack</span>
+            </div>
+            <div class="home_header">
+              <span>Analizo. Diseño.</span>
+              <strong>Construyo</strong>
+            </div>
+          </div>
+        </div>
         <div class="header">
           <div class="navbuttons">
             <div id="hexagon">
@@ -14,7 +28,7 @@
               <router-link to="/work"><i class="fa fa-briefcase"></i></router-link>
             </div>
             <div id="hexagon">
-              <router-link to="/contact"><i class="fa fa-envelope"></i></router-link>
+              <router-link to="/contact"><i class="fa fa-phone-square"></i></router-link>
             </div>
             </div>
         </div>
@@ -29,37 +43,44 @@
         <div class="hex4 fadeIn coming03" v-on:mouseover="mouseOver">V</div>
         <div id="marc" class="Text text-justify fadeIn">
           <h3>Conocimientos</h3>
+          <div id="mark" class="fadeIn">
+            <br>
+            <p class="sp01">Pasa el cursor</p>
+            <ul>
+              <i><img src="/static/img/handleft.png"></i>
+            </ul>
+          </div>
           <div id="mongo" class="hidecont">
             <p class="codti01">MongoDB</p>
             <p><span class="sp01">Descripción: </span>Me gusta trabajar principalmente
                con Mongo, me parece una base de datos no relacional muy eficiente,
                  pero también puedo adaptar proyectos con MySQL o Firebase, según
                   la necesidad.</p>
-            <p><span class="sp01">Habilidades: </span>SQL, JSON + Diseño de DB</p>
+            <p><span class="sp01">Habilidades: </span>SQL, JSON + Modelación DB</p>
           </div>
           <div id="nodejs" class="hidecont">
             <p class="codti02">Node.js</p>
-            <p><span class="sp02">Descripción: </span>Me gusta trabajar principalmente
-               con Mongo, me parece una base de datos no relacional muy eficiente,
-                 pero también puedo adaptar proyectos con MySQL o Firebase, según
-                  la necesidad.</p>
+            <p><span class="sp02">Descripción: </span>Principalmente Node fue lo que
+               me impulso a ser desarrollador Javascript, el veloz al momento de
+               interpretar código, ofrece grandes ventajas mediante la programación
+                asíncrona y esta soportado por una gran comunidad, permitiendo así
+                 encontrar gran documentación y recursos que te ayudan a resolver problemas de forma ágil.</p>
             <p><span class="sp02">Habilidades: </span>Javascript, npm</p>
           </div>
           <div id="express" class="hidecont">
             <p class="codti03">Express</p>
-            <p><span class="sp03">Descripción: </span>Me gusta trabajar principalmente
-               con Mongo, me parece una base de datos no relacional muy eficiente,
-                 pero también puedo adaptar proyectos con MySQL o Firebase, según
-                  la necesidad.</p>
-            <p><span class="sp03">Habilidades: </span>Javascript, npm</p>
+            <p><span class="sp03">Descripción: </span>Es como un framework minimalista, pero a cambio de eso
+               prefiero considerarlo como una librería que te permite agilizar el tiempo de desarrollo
+                implementando un estándar al momento de estructurar un proyecto.</p>
+            <p><span class="sp03">Habilidades: </span>Ariquitectura de aplicación, MVC</p>
           </div>
           <div id="vuejs" class="hidecont">
             <p class="codti04">Vue.js</p>
-            <p><span class="sp04">Descripción: </span>Me gusta trabajar principalmente
-               con Mongo, me parece una base de datos no relacional muy eficiente,
-                 pero también puedo adaptar proyectos con MySQL o Firebase, según
-                  la necesidad.</p>
-            <p><span class="sp04">Habilidades: </span>Javascript, npm</p>
+            <p><span class="sp04">Descripción: </span>Es un framework sencillo y fácil de interpretar,
+               me permite usar los comceptos que ya conozco de desarrollo Frontend y aplicarlo sin tanto enrredo,
+                aunque también se un poco de React.js, me llevo mejor con Vue, ambos son excelentes
+                 para construir aplicaciones web progresivas.</p>
+            <p><span class="sp04">Habilidades: </span>HTML5,CSS,Javascript</p>
           </div>
         </div>
       </div>
@@ -73,43 +94,70 @@ export default {
   components: {
     Footer
   },
+  mounted(){
+    this.switchClass(-1);
+  },
   methods:{
   mouseOver: function(id){
 
-    var elementA, elementB, elementC, elementD;
+    var elementA, elementB, elementC, elementD, elementE;
 
     elementA = document.getElementById('mongo');
     elementB = document.getElementById('nodejs');
     elementC = document.getElementById('express');
     elementD = document.getElementById('vuejs');
+    elementE = document.getElementById('mark');
 
     if(id.target.className == "hex1 fadeIn coming01"){
       elementA.className = "contbox fadeIn delay-1";
       elementB.className = "hidecont";
       elementC.className = "hidecont";
       elementD.className = "hidecont";
+      elementE.className = "hidecont";
     }else if(id.target.className == "hex2 fadeIn coming04"){
       elementA.className = "hidecont";
       elementB.className = "contbox fadeIn delay-1";
       elementC.className = "hidecont";
       elementD.className = "hidecont";
+      elementE.className = "hidecont";
     }else if(id.target.className == "hex3 fadeIn coming02"){
       elementA.className = "hidecont";
       elementB.className = "hidecont";
       elementC.className = "contbox fadeIn delay-1";
       elementD.className = "hidecont";
+      elementE.className = "hidecont";
     }else if (id.target.className == "hex4 fadeIn coming03") {
       elementA.className = "hidecont";
       elementB.className = "hidecont";
       elementC.className = "hidecont";
       elementD.className = "contbox fadeIn delay-1";
+      elementE.className = "hidecont";
     }
-    }
+  },
+  switchClass(i){
+    let t = setInterval(() => {
+        if (document.readyState === 'complete') {
+            // run after page has finished loadin
+            var lis = $('#home-news > div');
+            lis.eq(i).removeClass('home_header_on');
+            lis.eq(i).removeClass('home_header_out');
+             lis.eq(i = ++i % lis.length).addClass('home_header_on');
+             lis.eq(i = ++i % lis.length).addClass('home_header_out');
+        }
+    }, 3500)
+  }
   }
 }
 </script>
 
 <style lang="css">
+.myname{
+  font-size: 3rem;
+  color: #131313;
+  letter-spacing: .10em;
+  text-rendering: optimizeLegibility;
+  text-shadow: 0px 1px 0px rgba(150, 150, 150, 1);
+}
 #logo{
   width: 300px;
   height: 300px;
@@ -335,5 +383,71 @@ export default {
 }
 .sp04{
   color: #16A085;
+}
+
+.page{
+  margin:0 auto;
+  padding-top:20em;
+  width: 800px;
+}
+
+
+.page{
+  margin:0 auto;
+  padding-top:20em;
+  width: 800px;
+}
+#home-news{
+  font-size: 30px;
+	text-align:center;
+	color:#464646;
+	height: 45px;
+	line-height: 45px;
+	overflow:hidden;
+	position:relative;
+}.home_header {
+	position:absolute;
+	width:100%;
+	z-index:99;
+	color:#333;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+.home_header_on {
+	z-index:100;
+}.home_header strong {
+	color: #b3b3b3;
+}.home_header span, .home_header strong {
+	position:relative;
+	top:-50px;
+}.home_header_on *:nth-child(1) {
+	 top: 0;
+	-webkit-transition: top .6s ease-in-out;
+	-moz-transition: top .6s ease-in-out;
+	 transition: top .6s ease-in-out;
+}.home_header_on *:nth-child(2) {
+	top: 0;
+	-webkit-transition: top .6s ease-in-out .15s;
+	-moz-transition: top .6s ease-in-out .15s;
+	transition: top .6s ease-in-out .15s;
+}.home_header_on *:nth-child(3) {
+	top: 0;
+	-webkit-transition: top .6s ease-in-out .3s;
+	-moz-transition: top .6s ease-in-out .3s;
+	transition: top .6s ease-in-out .3s;
+}.home_header_out *:nth-child(1) {
+	top: 50px;
+	-webkit-transition: top .6s ease-in-out;
+	-webkit-transition: top .6s ease-in-out;
+	-moz-transition: top .6s ease-in-out;
+}.home_header_out *:nth-child(2) {
+	top: 50px;
+	-webkit-transition: top .6s ease-in-out .15s;
+	-moz-transition: top .6s ease-in-out .15s;
+	transition: top .6s ease-in-out .15s;
+}.home_header_out *:nth-child(3) {
+	top: 50px;
+	-webkit-transition: top .6s ease-in-out .3s;
+	-moz-transition: top .6s ease-in-out .3s;
+	transition: top .6s ease-in-out .3s;
 }
 </style>
