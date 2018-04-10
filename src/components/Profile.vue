@@ -1,5 +1,5 @@
 <template lang="html">
-  <div>
+  <div itemscope itemtype="http://schema.org/Person">
     <Navbar/>
       <h1 class="profile fadeIn delay-1" id="profile">
         ¿QUIEN
@@ -13,7 +13,24 @@
           Hace seis años decidí casarme, gracias a ello vivo feliz con mi esposa y dos hermosos hijos,
           Santiago mi niño travieso y Sofia la princesa de papá. Mi familia es el motor de mi vida y ellos me dan la
           fuerza para superar cualquier obstáculo.</p>
-      <img src="/static/img/profile.jpg" class="avatar fadeIn">
+      <img src="/static/img/profile.jpg" class="avatar fadeIn" itemprop="image" alt="Foto de Jonathan Simanca">
+      <div class="hidecont">
+        <span itemprop="name">Jonathan Simanca Mora</span>
+        <span itemprop="jobTitle">Desarrollador Full Stack Javascript</span>
+        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+          <span itemprop="addressLocality">Fontibón</span>,
+          <span itemprop="addressRegion">Bogotá</span>
+          <span itemprop="postalCode">110921</span>
+        </div>
+        <span itemprop="telephone">(+51) 320-2696672</span>
+        <a href="mailto:jonathan.simanca@outlook.com" itemprop="email">
+          jonathan.simanca@outlook.com</a>
+        Jane's home page:
+        <a href="http://www.jonathansm.com" itemprop="url">jonathansm.com</a>
+        Graduado del:
+        <a href="http://www.sena.edu.co/es-co/Paginas/default.aspx" itemprop="colleague">
+          SENA</a>
+      </div>
       <div class="container text-justify cont2 handcont fadeIn">
         <div class="row">
             <div class="col-sm-6 card">

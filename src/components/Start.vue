@@ -2,7 +2,7 @@
   <div class="container handcont">
     <div class="row">
       <div class="col-sm-7 handmain fadeIn">
-        <h1 class="myname">Jonathan Simanca Mora</h1>
+        <h1 class="myname">Jonathan Simanca</h1>
         <div>
           <div id="home-news">
             <div class="home_header">
@@ -151,6 +151,8 @@ export default {
 </script>
 
 <style lang="css">
+
+/*Header Style*/
 .myname{
   font-size: 3rem;
   color: #131313;
@@ -176,6 +178,7 @@ export default {
   overflow:hidden;
 }
 
+/*Fadein animation*/
 .coming01{
   animation-delay: 0.2s;
 }
@@ -188,6 +191,8 @@ export default {
 .coming04{
   animation-delay: 0.8s;
 }
+
+/*Styles of hexagons*/
 .conthex{
   margin-top: 40px;
   margin-left: 15%;
@@ -222,7 +227,7 @@ export default {
   border-top: 50px solid transparent;
   border-bottom: 50px solid #333333;
 }
-/*hooooo*/
+
 .hex2{
   margin-top: 60px;
   margin-left: 95px;
@@ -254,7 +259,7 @@ export default {
   border-bottom: 50px solid #8cc84b;
 }
 
-/*hooooo*/
+
 .hex3{
   margin-top: -100px;
   margin-left: -95px;
@@ -285,8 +290,6 @@ export default {
   border-top: 50px solid transparent;
   border-bottom: 50px solid #b3b3b3;
 }
-
-/*hooooo*/
 .hex4{
   margin-top: 60px;
   margin-left: 0px;
@@ -318,6 +321,7 @@ export default {
   border-bottom: 50px solid #16A085;
 }
 
+/*Hexango text styles and efects*/
 .Text{
   margin-top: -350px;
   padding-left: 400px;
@@ -390,13 +394,13 @@ export default {
   padding-top:20em;
   width: 800px;
 }
-
-
 .page{
   margin:0 auto;
   padding-top:20em;
   width: 800px;
 }
+
+/*Styles of animated text*/
 #home-news{
   font-size: 30px;
 	text-align:center;
