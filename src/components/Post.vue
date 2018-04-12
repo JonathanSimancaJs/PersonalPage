@@ -21,7 +21,7 @@
               </div>
               <div class="separator"></div>
               <div class="blogparagraph">
-                <p>
+                <p v-html="desc">
                   {{ blog.content }}
                 </p>
               </div>
@@ -64,7 +64,7 @@
           </ul>
         </div>
       </div>
-    </div>    
+    </div>
     <Footer/>
   </div>
 </template>

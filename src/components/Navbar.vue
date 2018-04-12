@@ -11,16 +11,16 @@
       <div class="navbarmain">
         <div class="navbuttons">
           <div id="hexagon">
-            <router-link :to="{ name: 'profile'}"><i class="fa fa-user"></i></router-link>
+            <router-link :to="{ name: 'profile'}"><i class="fa fa-user" title="Perfil"></i></router-link>
           </div>
           <div id="hexagon">
-            <router-link :to="{ name: 'work' }"><i class="fa fa-briefcase"></i></router-link>
+            <router-link :to="{ name: 'work' }"><i class="fa fa-briefcase" title="Proyectos"></i></router-link>
           </div>
           <div id="hexagon">
-            <router-link :to="{ name: 'post' }"><i class="fa fa-rss-square"></i></router-link>
+            <router-link :to="{ name: 'post' }"><i class="fa fa-rss-square" title="Blog"></i></router-link>
           </div>
           <div id="hexagon">
-            <router-link :to="{ name: 'contact' }"><i class="fa fa-phone-square"></i></router-link>
+            <router-link :to="{ name: 'contact' }"><i class="fa fa-phone-square" title="Contactame"></i></router-link>
           </div>
         </div>
       </div>

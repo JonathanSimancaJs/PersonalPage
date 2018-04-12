@@ -128,10 +128,10 @@ export default {
     Footer
   },
   mounted() {
-    if (window.innerWidth <= 1300) {
+    if (window.innerWidth <= 1500) {
       document.getElementById('profile').style.top="30%";
       document.getElementById('profile').style.left="5%";
-      document.getElementById('parprofile').style.top="50%";
+      document.getElementById('parprofile').style.top="60%";
       document.getElementById('parprofile').style.left="5%";
     }
   }
@@ -159,7 +159,7 @@ export default {
   color: #16A085;
 }
 .profdes{
-  top: 62%;
+  top: 70%;
   left: 20%;
   max-width: 400px;
   position: absolute;

@@ -10,8 +10,8 @@
               <span>Backend</span>
             </div>
             <div class="home_header">
-              <strong>Javascript</strong>
-              <span>Full Stack</span>
+              <strong>Full Stack</strong>
+              <span>Javascript</span>
             </div>
             <div class="home_header">
               <span>Analizo. Diseño.</span>
@@ -22,13 +22,13 @@
         <div class="header">
           <div class="navbuttons">
             <div id="hexagon">
-              <router-link to="/profile"><i class="fa fa-user"></i></router-link>
+              <router-link to="/profile"><i class="fa fa-user" title="Perfil"></i></router-link>
             </div>
             <div id="hexagon">
-              <router-link to="/work"><i class="fa fa-briefcase"></i></router-link>
+              <router-link to="/work"><i class="fa fa-briefcase" title="Proyectos"></i></router-link>
             </div>
             <div id="hexagon">
-              <router-link to="/contact"><i class="fa fa-phone-square"></i></router-link>
+              <router-link to="/contact"><i class="fa fa-phone-square" title="Contactame"></i></router-link>
             </div>
             </div>
         </div>

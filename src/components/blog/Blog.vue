@@ -140,4 +140,7 @@ export default {
   font-size: 2rem;
   color: #C3C3C3;
 }
+.botexp h1{
+  text-align: left;
+}
 </style>
