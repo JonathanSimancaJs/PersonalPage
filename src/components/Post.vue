@@ -21,8 +21,7 @@
               </div>
               <div class="separator"></div>
               <div class="blogparagraph">
-                <p v-html="desc">
-                  {{ blog.content }}
+                <p v-html="blog.content">
                 </p>
               </div>
               <div class="fabiconbutton">
@@ -223,7 +222,7 @@ export default {
 .blogparagraph{
   padding-top: 10px;
   padding-right: 10px;
-  height: 180px;
+  height: 190px;
   overflow: hidden;
 }
 .bot{

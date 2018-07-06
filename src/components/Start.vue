@@ -14,11 +14,32 @@
               <span>Javascript</span>
             </div>
             <div class="home_header">
-              <span>Analizo. Diseño.</span>
-              <strong>Construyo</strong>
+              <span>Analisis. Diseño.</span>
+              <strong>Desarrollo</strong>
             </div>
           </div>
         </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbuttons">
+              <div id="hexagon">
+                <router-link to="/profile"><i class="fa fa-user" title="Perfil"></i></router-link>
+              </div>
+              <div id="hexagon">
+                <router-link to="/work"><i class="fa fa-briefcase" title="Proyectos"></i></router-link>
+              </div>
+              <div id="hexagon">
+                <router-link to="/contact"><i class="fa fa-phone-square" title="Contactame"></i></router-link>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+
+        <!--
         <div class="header">
           <div class="navbuttons">
             <div id="hexagon">
@@ -32,6 +53,7 @@
             </div>
             </div>
         </div>
+      -->
       </div>
       <div class="col-sm-5 handmain fadeIn">
         <img src="/static/img/logotatan.png" id="logo">
